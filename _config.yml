@@ -1,9 +1,10 @@
 # site settings
 
 title: trisfproject
-description: Jekyll theme for a beautiful online CV
-taglong: Jekyll theme for a beautiful online CV
-tagshort: Jekyll theme
+description: 
+I turn coffee :coffee: into code, use tabs over spaces.
+taglong: trisf project 
+tagshort: trisf
 url: trisfproject.github.io
 baseurl: ""
 permalink: pretty
