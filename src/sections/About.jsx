@@ -22,8 +22,9 @@ export function About() {
           <div className="surface rounded-[24px] p-5 sm:p-6 md:p-8">
             <p className="text-base leading-8 text-[#d4d4d8] sm:text-lg sm:leading-9">
               TRISF PROJECTS focuses on reliable infrastructure, clear monitoring, and automation that
-              makes operations easier to repeat. The work spans cloud systems, CI/CD, Android platform
-              development, and fast web solutions built with a practical engineering mindset.
+              makes operations easier to repeat. The work spans observability, cloud systems, CI/CD,
+              Android platform development, and fast web solutions built with a practical engineering
+              mindset.
             </p>
             <div className="mt-8 flex flex-wrap gap-2">
               {roles.map((role) => (

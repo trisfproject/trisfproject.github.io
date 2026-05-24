@@ -20,7 +20,7 @@ export function ProjectsPage() {
     <>
       <SEO
         title="Projects | TRISF PROJECTS"
-        description="Explore TRISF PROJECTS work across Infrastructure, Monitoring, Automation, Android Development, and Web Solutions."
+        description="Explore TRISF PROJECTS work across Infrastructure, Monitoring, Observability, Automation, Cloud Engineering, Android Development, and Web Solutions."
         url="https://trisfproject.github.io/projects"
       />
       <main id="main-content" className="min-h-screen pt-28 sm:pt-32">
@@ -36,7 +36,7 @@ export function ProjectsPage() {
                 </h1>
                 <p className="mt-5 max-w-3xl text-base leading-7 text-[#a1a1aa] sm:text-lg sm:leading-8">
                   A project archive covering platform foundations, monitoring systems, automation,
-                  Android development, web delivery, and security integrations.
+                  observability, cloud automation, Android development, web delivery, and security integrations.
                 </p>
               </div>
               <div className="surface rounded-[24px] p-5">
@@ -57,6 +57,7 @@ export function ProjectsPage() {
                   key={category}
                   type="button"
                   onClick={() => setActiveCategory(category)}
+                  aria-pressed={activeCategory === category}
                   className={`shrink-0 rounded-full border px-4 py-2 text-sm font-semibold transition duration-200 focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 ${
                     activeCategory === category
                       ? 'border-[#22c55e]/35 bg-[#22c55e]/14 text-white'

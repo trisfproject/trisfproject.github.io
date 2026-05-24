@@ -11,6 +11,7 @@ import {
   Layers3,
   LineChart,
   MonitorCog,
+  Orbit,
   RadioTower,
   Server,
   ShieldCheck,
@@ -37,6 +38,8 @@ export const techStackGroups = [
       { name: 'Grafana', icon: LineChart },
       { name: 'Prometheus', icon: RadioTower },
       { name: 'Datadog', icon: Gauge },
+      { name: 'New Relic', icon: Orbit },
+      { name: 'Nyx', icon: MonitorCog },
     ],
   },
   {

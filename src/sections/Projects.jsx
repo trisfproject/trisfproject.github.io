@@ -16,7 +16,7 @@ export function Projects() {
           <SectionHeader
             eyebrow="Featured projects"
             title="Curated systems, automation, and platform work."
-            description="A focused selection of infrastructure, monitoring, automation, Android, security, and delivery projects."
+            description="A focused selection of infrastructure, monitoring, observability, automation, Android, security, cloud, and delivery projects."
           />
         </Reveal>
         <Reveal delay={0.08}>

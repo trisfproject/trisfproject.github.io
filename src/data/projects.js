@@ -19,7 +19,7 @@ export const projects = [
   },
   {
     title: 'GCP Infrastructure Automation',
-    category: 'Infrastructure',
+    category: 'Cloud',
     featured: true,
     description:
       'Cloud provisioning workflows for compute, DNS, edge routing, secrets, and deployment environments on Google Cloud.',
@@ -71,6 +71,22 @@ export const projects = [
     github: 'https://github.com/trisfproject',
   },
   {
+    title: 'Nyx Monitoring Platform',
+    category: 'Observability',
+    description:
+      'Focused monitoring workspace for service status, operational signals, incident context, and infrastructure visibility.',
+    tags: ['Nyx', 'Monitoring', 'Alerts', 'Operations'],
+    github: 'https://github.com/trisfproject',
+  },
+  {
+    title: 'APM & Observability Platform',
+    category: 'Observability',
+    description:
+      'Application performance visibility with latency tracking, service-level telemetry, error signals, and release awareness.',
+    tags: ['APM', 'New Relic', 'Telemetry', 'Tracing'],
+    github: 'https://github.com/trisfproject',
+  },
+  {
     title: 'Cloudflare Security Integration',
     category: 'Security',
     description:
@@ -92,8 +108,10 @@ export const projectCategories = [
   'All',
   'Infrastructure',
   'Monitoring',
+  'Observability',
   'Automation',
   'Android',
   'Web Solutions',
   'Security',
+  'Cloud',
 ];
