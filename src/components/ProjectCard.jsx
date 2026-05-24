@@ -16,7 +16,7 @@ export function ProjectCard({ project, compact = false }) {
         <span className="rounded-full border border-[#22c55e]/20 bg-[#22c55e]/10 px-3 py-1 text-xs font-semibold text-[#22c55e]">
           {project.category}
         </span>
-        {project.tags.slice(0, compact ? 3 : 4).map((tag) => (
+        {project.tags.slice(0, compact ? 5 : 4).map((tag) => (
           <span
             key={tag}
             className="rounded-full border border-white/10 bg-[#18181b]/70 px-3 py-1 text-xs font-medium text-[#a1a1aa] transition group-hover:border-white/15 group-hover:text-[#d4d4d8]"

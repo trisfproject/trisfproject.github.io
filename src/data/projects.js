@@ -1,8 +1,62 @@
 export const projects = [
   {
-    title: 'Kubernetes Infrastructure',
+    title: 'Web Solutions',
+    category: 'Web Solutions',
+    featured: true,
+    description:
+      'Modern web platform development focused on performance, scalability, responsive user experience, and maintainable delivery.',
+    tags: ['React', 'Laravel', 'MySQL', 'Cloudflare'],
+    github: 'https://github.com/trisfproject',
+    live: 'https://www.trisf.my.id/',
+  },
+  {
+    title: 'Android Development',
+    category: 'Android',
+    featured: true,
+    description:
+      'Android application and custom ROM development optimized for performance, stability, release quality, and user experience.',
+    tags: ['Android', 'Kotlin', 'Firebase', 'AOSP'],
+    github: 'https://github.com/trisfproject',
+  },
+  {
+    title: 'Telegram Automation',
+    category: 'Automation',
+    featured: true,
+    description:
+      'Automation platform integrating Telegram bots, monitoring alerts, notifications, and operational workflows.',
+    tags: ['Python', 'Telegram API', 'Docker', 'Webhooks'],
+    github: 'https://github.com/trisfproject',
+  },
+  {
+    title: 'Infrastructure Engineering',
     category: 'Infrastructure',
     featured: true,
+    description:
+      'Production-grade infrastructure architecture, deployment automation, and cloud-native environment management.',
+    tags: ['Kubernetes', 'Docker', 'Linux', 'Terraform', 'GCP'],
+    github: 'https://github.com/trisfproject',
+  },
+  {
+    title: 'Monitoring & Observability',
+    category: 'Observability',
+    featured: true,
+    description:
+      'Infrastructure and application monitoring ecosystem with real-time observability, alerting, and operational visibility.',
+    tags: ['Grafana', 'Prometheus', 'Datadog', 'New Relic'],
+    github: 'https://github.com/trisfproject',
+  },
+  {
+    title: 'Nyx Platform',
+    category: 'Observability',
+    featured: true,
+    description:
+      'Centralized monitoring and observability platform designed for infrastructure visibility and operational monitoring.',
+    tags: ['Nyx', 'Grafana', 'Prometheus', 'Cloud Infrastructure'],
+    github: 'https://github.com/trisfproject',
+  },
+  {
+    title: 'Kubernetes Infrastructure',
+    category: 'Infrastructure',
     description:
       'Container platform setup for reliable workloads, ingress routing, service isolation, resource controls, and repeatable operations.',
     tags: ['Kubernetes', 'Docker', 'Linux', 'NGINX'],
@@ -11,7 +65,6 @@ export const projects = [
   {
     title: 'Grafana & Prometheus Monitoring',
     category: 'Monitoring',
-    featured: true,
     description:
       'Production monitoring setup with dashboards, alert rules, uptime checks, and service health baselines for daily operations.',
     tags: ['Grafana', 'Prometheus', 'Alerting', 'Linux'],
@@ -20,7 +73,6 @@ export const projects = [
   {
     title: 'GCP Infrastructure Automation',
     category: 'Cloud',
-    featured: true,
     description:
       'Cloud automation for compute, DNS, edge routing, secrets, and deployment environments on Google Cloud.',
     tags: ['GCP', 'Terraform', 'Cloudflare', 'Automation'],
@@ -29,7 +81,6 @@ export const projects = [
   {
     title: 'DevSecOps Pipeline',
     category: 'Security',
-    featured: true,
     description:
       'Release pipeline design with build checks, deployment controls, vulnerability awareness, and clean operational handoff.',
     tags: ['GitHub Actions', 'CI/CD', 'Security', 'Docker'],
@@ -38,7 +89,6 @@ export const projects = [
   {
     title: 'Android Custom ROM Development',
     category: 'Android',
-    featured: true,
     description:
       'Android build workflow covering device trees, kernel changes, release packaging, and custom ROM contribution support.',
     tags: ['Android', 'AOSP', 'Kernel', 'Linux'],
@@ -47,7 +97,6 @@ export const projects = [
   {
     title: 'Telegram Automation Platform',
     category: 'Automation',
-    featured: true,
     description:
       'Telegram-based automation for infrastructure alerts, command workflows, build notifications, and admin routines.',
     tags: ['Automation', 'Webhooks', 'Linux', 'CI/CD'],
