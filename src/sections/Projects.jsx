@@ -14,8 +14,8 @@ export function Projects() {
       <Reveal>
         <SectionHeader
           eyebrow="Featured projects"
-          title="Infrastructure, automation, and applied security work."
-          description="A compact view of systems-focused projects across cloud-native infrastructure, monitoring, Android builds, workshop operations, and automation."
+          title="Production-minded systems, automation, and platform work."
+          description="Infrastructure-focused projects across Kubernetes, monitoring, cloud automation, DevSecOps, Android builds, web delivery, and operational alerting."
         />
       </Reveal>
       <div className="grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">

@@ -11,6 +11,7 @@ const navItems = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('top');
 
   useEffect(() => {
     let frame = 0;
@@ -27,6 +28,31 @@ export function Navbar() {
       window.removeEventListener('scroll', onScroll);
       if (frame) window.cancelAnimationFrame(frame);
     };
+  }, []);
+
+  useEffect(() => {
+    const targets = ['top', ...navItems.map((item) => item.href.slice(1))]
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visible?.target?.id) {
+          setActiveSection(visible.target.id);
+        }
+      },
+      {
+        rootMargin: '-28% 0px -58% 0px',
+        threshold: [0.08, 0.18, 0.32],
+      },
+    );
+
+    targets.forEach((target) => observer.observe(target));
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -55,7 +81,12 @@ export function Navbar() {
             <a
               key={item.href}
               href={item.href}
-              className="rounded-full px-4 py-2 text-sm font-medium text-[#a1a1aa] transition duration-200 hover:bg-white/[0.05] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70"
+              aria-current={activeSection === item.href.slice(1) ? 'page' : undefined}
+              className={`rounded-full px-4 py-2 text-sm font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 ${
+                activeSection === item.href.slice(1)
+                  ? 'bg-[#22c55e]/12 text-white shadow-[inset_0_0_0_1px_rgb(34_197_94/0.2)]'
+                  : 'text-[#a1a1aa] hover:bg-white/[0.05] hover:text-white'
+              }`}
             >
               {item.label}
             </a>
@@ -103,7 +134,12 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="block rounded-2xl px-4 py-3 text-sm font-semibold text-[#a1a1aa] transition hover:bg-white/[0.06] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70"
+                aria-current={activeSection === item.href.slice(1) ? 'page' : undefined}
+                className={`block rounded-2xl px-4 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 ${
+                  activeSection === item.href.slice(1)
+                    ? 'bg-[#22c55e]/12 text-white'
+                    : 'text-[#a1a1aa] hover:bg-white/[0.06] hover:text-white'
+                }`}
               >
                 {item.label}
               </a>

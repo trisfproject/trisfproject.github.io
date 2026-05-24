@@ -2,8 +2,8 @@
   <rect width="1200" height="630" fill="#050816"/>
   <circle cx="840" cy="100" r="290" fill="#22c55e" fill-opacity="0.13"/>
   <path d="M90 118H1110V512H90V118Z" fill="#18181b" fill-opacity="0.52" stroke="white" stroke-opacity="0.08"/>
-  <text x="120" y="216" fill="#22c55e" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="9">TRISF PROJECTS</text>
-  <text x="120" y="340" fill="white" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="700">Build. Secure.</text>
-  <text x="120" y="438" fill="white" font-family="Inter, Arial, sans-serif" font-size="86" font-weight="700">Automate.</text>
-  <text x="120" y="498" fill="#a1a1aa" font-family="Inter, Arial, sans-serif" font-size="28">SysAdmin • DevOps • Infrastructure • Security</text>
+  <text x="120" y="204" fill="#22c55e" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="9">TRISF PROJECTS</text>
+  <text x="120" y="326" fill="white" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="700">Infrastructure.</text>
+  <text x="120" y="418" fill="white" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="700">Automation.</text>
+  <text x="120" y="498" fill="#a1a1aa" font-family="Inter, Arial, sans-serif" font-size="28">Monitoring • Cloud • Android • Web Solutions</text>
 </svg>
