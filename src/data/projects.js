@@ -22,7 +22,6 @@ export const projects = [
   {
     title: 'Komodo OS',
     category: 'Android',
-    featured: true,
     description:
       'Android custom ROM ecosystem project focused on performance optimization, stability, and user experience improvements.',
     tags: ['Android', 'AOSP', 'Kotlin'],
@@ -32,7 +31,6 @@ export const projects = [
   {
     title: 'Nusantara Project',
     category: 'Open Source & Community',
-    featured: true,
     description:
       'Open-source Android ecosystem contribution and collaborative device development project.',
     tags: ['Android', 'Linux', 'Git'],
@@ -62,6 +60,7 @@ export const projects = [
   {
     title: 'Cron Monitoring Dashboard',
     category: 'Automation',
+    featured: true,
     description:
       'Centralized cronjob and infrastructure monitoring dashboard designed for operational visibility and service tracking.',
     tags: ['React', 'Monitoring API', 'Linux'],
@@ -71,6 +70,7 @@ export const projects = [
   {
     title: 'Telegram Automation Platform',
     category: 'Automation',
+    featured: true,
     description:
       'Automation platform integrating Telegram bots, operational notifications, monitoring alerts, and workflow automation systems.',
     tags: ['Python', 'Telegram API', 'Docker'],

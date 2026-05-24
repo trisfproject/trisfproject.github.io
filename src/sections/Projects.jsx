@@ -7,7 +7,17 @@ import { SectionHeader } from '../components/SectionHeader.jsx';
 import { projects } from '../data/projects.js';
 
 export function Projects() {
-  const featuredProjects = projects.filter((project) => project.featured).slice(0, 6);
+  const featuredOrder = [
+    'Telegram Automation Platform',
+    'Infrastructure Monitoring Stack',
+    'Cron Monitoring Dashboard',
+    'Global Technindo',
+    'REDNECK EV',
+    'Nyx Platform',
+  ];
+  const featuredProjects = featuredOrder
+    .map((title) => projects.find((project) => project.title === title))
+    .filter(Boolean);
 
   return (
     <Container id="projects" className="section-fade py-20 sm:py-24 md:py-32">

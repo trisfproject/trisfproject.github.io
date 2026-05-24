@@ -9,10 +9,14 @@ import { projectCategories, projects } from '../data/projects.js';
 export function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState('All');
   const filteredProjects = useMemo(
-    () =>
-      activeCategory === 'All'
-        ? projects
-        : projects.filter((project) => project.category === activeCategory),
+    () => {
+      const visibleProjects =
+        activeCategory === 'All'
+          ? projects
+          : projects.filter((project) => project.category === activeCategory);
+
+      return [...visibleProjects].sort((a, b) => a.title.localeCompare(b.title));
+    },
     [activeCategory],
   );
 
