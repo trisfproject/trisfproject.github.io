@@ -15,8 +15,8 @@ export function Projects() {
         <Reveal>
           <SectionHeader
             eyebrow="Featured projects"
-            title="Core engineering services, presented through real project work."
-            description="A curated showcase of web solutions, Android development, Telegram automation, infrastructure engineering, observability, and the Nyx platform."
+            title="Focused engineering work, presented through real projects."
+            description="A curated showcase of business websites, EV service platforms, Android ROM development, open-source collaboration, and monitoring infrastructure."
           />
         </Reveal>
         <Reveal delay={0.08}>
