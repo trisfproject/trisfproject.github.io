@@ -19,16 +19,16 @@ export const projects = [
   },
   {
     title: 'Komodo OS',
-    category: 'Android',
+    category: 'Open Source & Community',
     featured: true,
     description:
-      'Android custom ROM project focused on system optimization, performance, stability, and user experience enhancements.',
+      'Android custom ROM project and community-driven ecosystem work focused on system optimization, stability, and user experience enhancements.',
     tags: ['Android', 'AOSP', 'Kotlin'],
     github: 'https://github.com/trisfproject',
   },
   {
     title: 'Nusantara Project',
-    category: 'Open Source',
+    category: 'Open Source & Community',
     featured: true,
     description:
       'Open-source Android ecosystem contribution and device development collaboration project.',
@@ -46,4 +46,4 @@ export const projects = [
   },
 ];
 
-export const projectCategories = ['All', 'Web Solutions', 'Android', 'Open Source', 'Monitoring'];
+export const projectCategories = ['All', 'Web Solutions', 'Open Source & Community', 'Monitoring'];

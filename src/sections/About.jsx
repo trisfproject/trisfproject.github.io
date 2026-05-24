@@ -8,6 +8,7 @@ const roles = [
   'Automation',
   'Cloud Engineering',
   'Android Development',
+  'Open Source & Community',
   'Web Solutions',
 ];
 
@@ -24,7 +25,8 @@ export function About() {
               TRISF PROJECTS provides infrastructure engineering, monitoring and observability,
               automation, cloud delivery, Android development, and web solutions for teams that need
               practical technical execution. The focus is dependable systems, clear operations, and
-              maintainable delivery workflows.
+              maintainable delivery workflows. Actively supporting open-source ecosystems and modern
+              engineering communities, especially around Android and platform development.
             </p>
             <div className="mt-8 flex flex-wrap gap-2">
               {roles.map((role) => (
