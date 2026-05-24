@@ -10,7 +10,7 @@ export function Projects() {
   const spotlight = useSpotlight();
 
   return (
-    <Container id="projects" className="py-24 md:py-32">
+    <Container id="projects" className="section-fade py-20 sm:py-24 md:py-32">
       <Reveal>
         <SectionHeader
           eyebrow="Featured projects"
@@ -18,26 +18,28 @@ export function Projects() {
           description="A compact view of systems-focused projects across cloud-native infrastructure, monitoring, Android builds, workshop operations, and automation."
         />
       </Reveal>
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <Reveal key={project.title} delay={index * 0.04}>
             <article
               {...spotlight}
-              className="card-spotlight flex min-h-[320px] flex-col rounded-[24px] border border-white/10 p-6 shadow-2xl shadow-black/10 transition duration-200 hover:-translate-y-1 hover:border-[#22c55e]/35"
+              className="card-spotlight group flex min-h-[300px] flex-col rounded-[24px] border border-white/10 p-5 shadow-2xl shadow-black/10 transition duration-200 ease-out hover:-translate-y-1 hover:border-[#22c55e]/35 hover:shadow-[#22c55e]/[0.035] sm:min-h-[320px] sm:p-6"
             >
               <div className="mb-5 flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-white/10 bg-[#18181b]/70 px-3 py-1 text-xs font-medium text-[#a1a1aa]"
+                    className="rounded-full border border-white/10 bg-[#18181b]/70 px-3 py-1 text-xs font-medium text-[#a1a1aa] transition group-hover:border-white/15 group-hover:text-[#d4d4d8]"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
-              <h3 className="text-2xl font-semibold tracking-normal text-white">{project.title}</h3>
+              <h3 className="text-[1.35rem] font-semibold leading-tight tracking-normal text-white sm:text-2xl">
+                {project.title}
+              </h3>
               <p className="mt-4 flex-1 text-sm leading-7 text-[#a1a1aa]">{project.description}</p>
-              <div className="mt-7 flex flex-wrap gap-3">
+              <div className="mt-7 flex flex-wrap gap-3 border-t border-white/10 pt-5">
                 <Button href={project.github} icon={Github} variant="secondary" className="min-h-10 px-4">
                   GitHub
                 </Button>

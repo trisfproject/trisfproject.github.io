@@ -9,7 +9,7 @@ export function Button({ href, children, icon: Icon, variant = 'primary', classN
       href={href}
       target="_blank"
       rel="noreferrer"
-      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-full border px-5 text-sm font-semibold transition duration-200 focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 focus:ring-offset-2 focus:ring-offset-[#050816] ${styles} ${className}`}
+      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-full border px-5 text-sm font-semibold transition duration-200 ease-out hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 focus:ring-offset-2 focus:ring-offset-[#050816] active:translate-y-0 ${styles} ${className}`}
     >
       {Icon ? <Icon aria-hidden="true" size={18} strokeWidth={2.2} /> : null}
       {children}
