@@ -1,17 +1,18 @@
 import { ExternalLink, Github, Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 const navItems = [
-  { label: 'Projects', href: '#projects' },
-  { label: 'Stack', href: '#stack' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', to: '/' },
+  { label: 'Projects', to: '/projects' },
+  { label: 'Contact', to: '/#contact' },
 ];
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('top');
+  const location = useLocation();
 
   useEffect(() => {
     let frame = 0;
@@ -31,7 +32,9 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-    const targets = ['top', ...navItems.map((item) => item.href.slice(1))]
+    if (location.pathname !== '/') return undefined;
+
+    const targets = ['top', 'contact']
       .map((id) => document.getElementById(id))
       .filter(Boolean);
 
@@ -53,7 +56,17 @@ export function Navbar() {
 
     targets.forEach((target) => observer.observe(target));
     return () => observer.disconnect();
-  }, []);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname, location.hash]);
+
+  const isItemActive = (item) => {
+    if (item.to === '/projects') return location.pathname === '/projects';
+    if (item.to === '/#contact') return location.pathname === '/' && activeSection === 'contact';
+    return location.pathname === '/' && activeSection !== 'contact';
+  };
 
   return (
     <header
@@ -64,8 +77,8 @@ export function Navbar() {
       }`}
     >
       <nav className="section-shell flex h-16 items-center justify-between sm:h-[72px]">
-        <a
-          href="#top"
+        <Link
+          to="/"
           className="flex min-w-0 items-center gap-3 rounded-full focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70"
         >
           <span className="grid size-9 shrink-0 place-items-center rounded-2xl border border-[#22c55e]/25 bg-[#22c55e]/10 text-sm font-black text-[#22c55e]">
@@ -74,22 +87,22 @@ export function Navbar() {
           <span className="truncate text-xs font-bold tracking-[0.18em] text-white sm:text-sm">
             TRISF PROJECTS
           </span>
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-1 md:flex">
           {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              aria-current={activeSection === item.href.slice(1) ? 'page' : undefined}
+            <NavLink
+              key={item.to}
+              to={item.to}
+              aria-current={isItemActive(item) ? 'page' : undefined}
               className={`rounded-full px-4 py-2 text-sm font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 ${
-                activeSection === item.href.slice(1)
+                isItemActive(item)
                   ? 'bg-[#22c55e]/12 text-white shadow-[inset_0_0_0_1px_rgb(34_197_94/0.2)]'
                   : 'text-[#a1a1aa] hover:bg-white/[0.05] hover:text-white'
               }`}
             >
               {item.label}
-            </a>
+            </NavLink>
           ))}
         </div>
 
@@ -130,19 +143,18 @@ export function Navbar() {
         <div id="mobile-navigation" className="section-shell pb-4 md:hidden">
           <div className="rounded-[24px] border border-white/10 bg-[#18181b]/92 p-2 shadow-2xl shadow-black/30 backdrop-blur-xl">
             {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                aria-current={activeSection === item.href.slice(1) ? 'page' : undefined}
+              <NavLink
+                key={item.to}
+                to={item.to}
+                aria-current={isItemActive(item) ? 'page' : undefined}
                 className={`block rounded-2xl px-4 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 ${
-                  activeSection === item.href.slice(1)
+                  isItemActive(item)
                     ? 'bg-[#22c55e]/12 text-white'
                     : 'text-[#a1a1aa] hover:bg-white/[0.06] hover:text-white'
                 }`}
               >
                 {item.label}
-              </a>
+              </NavLink>
             ))}
           </div>
         </div>

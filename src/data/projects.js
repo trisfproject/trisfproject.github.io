@@ -1,6 +1,8 @@
 export const projects = [
   {
     title: 'Kubernetes Infrastructure',
+    category: 'Infrastructure',
+    featured: true,
     description:
       'Cluster architecture for container workloads with ingress routing, service isolation, resource limits, and repeatable operations.',
     tags: ['Kubernetes', 'Docker', 'Linux', 'NGINX'],
@@ -8,6 +10,8 @@ export const projects = [
   },
   {
     title: 'Grafana & Prometheus Monitoring',
+    category: 'Monitoring',
+    featured: true,
     description:
       'Metrics-driven observability stack with dashboards, alert rules, uptime signals, and service health baselines.',
     tags: ['Grafana', 'Prometheus', 'Alerting', 'Linux'],
@@ -15,6 +19,8 @@ export const projects = [
   },
   {
     title: 'GCP Infrastructure Automation',
+    category: 'Infrastructure',
+    featured: true,
     description:
       'Cloud provisioning workflows for compute, DNS, edge routing, secrets, and deployment environments on Google Cloud.',
     tags: ['GCP', 'Terraform', 'Cloudflare', 'Automation'],
@@ -22,6 +28,8 @@ export const projects = [
   },
   {
     title: 'DevSecOps Pipeline',
+    category: 'Security',
+    featured: true,
     description:
       'CI/CD workflow with build checks, deployment gates, vulnerability awareness, and operational release hygiene.',
     tags: ['GitHub Actions', 'CI/CD', 'Security', 'Docker'],
@@ -29,6 +37,8 @@ export const projects = [
   },
   {
     title: 'Android Custom ROM Development',
+    category: 'Android',
+    featured: true,
     description:
       'Android build environment for device trees, kernel workflow, release packaging, and custom ROM contribution tooling.',
     tags: ['Android', 'AOSP', 'Kernel', 'Linux'],
@@ -36,6 +46,8 @@ export const projects = [
   },
   {
     title: 'Telegram Automation Platform',
+    category: 'Automation',
+    featured: true,
     description:
       'Bot-driven automation for infrastructure alerts, command workflows, build notifications, and admin routines.',
     tags: ['Automation', 'Webhooks', 'Linux', 'CI/CD'],
@@ -43,6 +55,7 @@ export const projects = [
   },
   {
     title: 'Web Infrastructure Optimization',
+    category: 'Web Solutions',
     description:
       'Fast static and application delivery with caching strategy, edge protection, routing cleanup, and deployment tuning.',
     tags: ['React', 'Laravel', 'Cloudflare', 'NGINX'],
@@ -51,6 +64,7 @@ export const projects = [
   },
   {
     title: 'Monitoring & Alerting Systems',
+    category: 'Monitoring',
     description:
       'Actionable alerting patterns for service reliability, incident response, uptime monitoring, and operator visibility.',
     tags: ['Datadog', 'Grafana', 'Prometheus', 'SRE'],
@@ -58,6 +72,7 @@ export const projects = [
   },
   {
     title: 'Cloudflare Security Integration',
+    category: 'Security',
     description:
       'Edge security configuration for DNS, TLS, WAF rules, access policies, and hardened public service exposure.',
     tags: ['Cloudflare', 'DNS', 'TLS', 'Security'],
@@ -65,9 +80,20 @@ export const projects = [
   },
   {
     title: 'CI/CD Automation',
+    category: 'Automation',
     description:
       'Automated build and release flows for web services, infrastructure changes, static sites, and deployment validation.',
     tags: ['GitHub Actions', 'Vite', 'Deployments', 'Automation'],
     github: 'https://github.com/trisfproject',
   },
+];
+
+export const projectCategories = [
+  'All',
+  'Infrastructure',
+  'Monitoring',
+  'Automation',
+  'Android',
+  'Web Solutions',
+  'Security',
 ];

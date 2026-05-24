@@ -1,12 +1,10 @@
 import { ExternalLink, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '../components/Button.jsx';
-import { Navbar } from '../components/Navbar.jsx';
 
 export function Hero() {
   return (
     <section id="top" className="relative min-h-[100svh] overflow-hidden">
-      <Navbar />
       <div className="pointer-events-none absolute inset-0">
         <motion.div
           className="absolute left-1/2 top-24 h-56 w-56 -translate-x-1/2 rounded-full bg-[#22c55e]/14 blur-3xl sm:h-72 sm:w-72 md:h-96 md:w-96"
