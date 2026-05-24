@@ -1,5 +1,45 @@
 export const projects = [
   {
+    title: 'Trisf Bot',
+    category: 'Automation',
+    description:
+      'Telegram automation platform designed for operational workflows, notifications, and infrastructure-related automation tasks.',
+    tags: ['Python', 'Telegram API', 'Docker'],
+    github: 'https://github.com/trisfproject',
+  },
+  {
+    title: 'Global Technindo',
+    category: 'Web Solutions',
+    description:
+      'Corporate web solution focused on modern responsive design, performance, and business presentation.',
+    tags: ['React', 'Laravel', 'Cloudflare'],
+    github: 'https://github.com/trisfproject',
+  },
+  {
+    title: 'REDNECK EV',
+    category: 'Web Solutions',
+    description:
+      'Modern branding and web platform for electric vehicle workshop and EV-related services.',
+    tags: ['React', 'TailwindCSS'],
+    github: 'https://github.com/trisfproject',
+  },
+  {
+    title: 'Komodo OS',
+    category: 'Android',
+    description:
+      'Android custom ROM project focused on system optimization, performance, and user experience enhancements.',
+    tags: ['Android', 'AOSP', 'Kotlin'],
+    github: 'https://github.com/trisfproject',
+  },
+  {
+    title: 'Nusantara Project',
+    category: 'Open Source',
+    description:
+      'Open-source Android ecosystem contribution and device development collaboration project.',
+    tags: ['Android', 'Linux', 'Git'],
+    github: 'https://github.com/trisfproject',
+  },
+  {
     title: 'Web Solutions',
     category: 'Web Solutions',
     featured: true,
@@ -38,7 +78,7 @@ export const projects = [
   },
   {
     title: 'Monitoring & Observability',
-    category: 'Observability',
+    category: 'Monitoring',
     featured: true,
     description:
       'Infrastructure and application monitoring ecosystem with real-time observability, alerting, and operational visibility.',
@@ -47,7 +87,7 @@ export const projects = [
   },
   {
     title: 'Nyx Platform',
-    category: 'Observability',
+    category: 'Monitoring',
     featured: true,
     description:
       'Centralized monitoring and observability platform designed for infrastructure visibility and operational monitoring.',
@@ -72,7 +112,7 @@ export const projects = [
   },
   {
     title: 'GCP Infrastructure Automation',
-    category: 'Cloud',
+    category: 'Infrastructure',
     description:
       'Cloud automation for compute, DNS, edge routing, secrets, and deployment environments on Google Cloud.',
     tags: ['GCP', 'Terraform', 'Cloudflare', 'Automation'],
@@ -80,7 +120,7 @@ export const projects = [
   },
   {
     title: 'DevSecOps Pipeline',
-    category: 'Security',
+    category: 'Infrastructure',
     description:
       'Release pipeline design with build checks, deployment controls, vulnerability awareness, and clean operational handoff.',
     tags: ['GitHub Actions', 'CI/CD', 'Security', 'Docker'],
@@ -121,7 +161,7 @@ export const projects = [
   },
   {
     title: 'Nyx Monitoring Platform',
-    category: 'Observability',
+    category: 'Monitoring',
     description:
       'Monitoring workspace for service status, operational signals, incident context, and infrastructure visibility.',
     tags: ['Nyx', 'Monitoring', 'Alerts', 'Operations'],
@@ -129,7 +169,7 @@ export const projects = [
   },
   {
     title: 'APM & Observability Platform',
-    category: 'Observability',
+    category: 'Monitoring',
     description:
       'Application performance monitoring with latency tracking, telemetry, error signals, tracing context, and release awareness.',
     tags: ['APM', 'New Relic', 'Telemetry', 'Tracing'],
@@ -137,7 +177,7 @@ export const projects = [
   },
   {
     title: 'Cloudflare Security Integration',
-    category: 'Security',
+    category: 'Infrastructure',
     description:
       'Cloudflare integration for DNS, TLS, WAF rules, access policies, and safer public service exposure.',
     tags: ['Cloudflare', 'DNS', 'TLS', 'Security'],
@@ -155,12 +195,10 @@ export const projects = [
 
 export const projectCategories = [
   'All',
+  'Automation',
+  'Web Solutions',
+  'Android',
+  'Open Source',
   'Infrastructure',
   'Monitoring',
-  'Observability',
-  'Automation',
-  'Android',
-  'Web Solutions',
-  'Security',
-  'Cloud',
 ];

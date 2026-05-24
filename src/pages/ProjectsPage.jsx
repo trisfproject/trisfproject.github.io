@@ -20,7 +20,7 @@ export function ProjectsPage() {
     <>
       <SEO
         title="Projects | TRISF PROJECTS"
-        description="Explore TRISF PROJECTS technical work across infrastructure, monitoring, observability, automation, cloud engineering, Android development, and web solutions."
+        description="Explore TRISF PROJECTS engineering work across automation, web solutions, Android development, open-source projects, infrastructure, and monitoring."
         url="https://trisfproject.github.io/projects"
       />
       <main id="main-content" className="min-h-screen pt-28 sm:pt-32">
@@ -32,11 +32,11 @@ export function ProjectsPage() {
             <div className="grid gap-6 lg:grid-cols-[1fr_0.46fr] lg:items-end">
               <div>
                 <h1 className="text-balance text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-6xl">
-                  Technical solutions organized by engineering discipline.
+                  Real projects, products, and engineering work.
                 </h1>
                 <p className="mt-5 max-w-3xl text-base leading-7 text-[#a1a1aa] sm:text-lg sm:leading-8">
-                  A project archive covering platform foundations, monitoring systems, automation,
-                  observability, cloud delivery, Android development, web engineering, and security integrations.
+                  A clean archive of automation platforms, web solutions, Android work, open-source
+                  contributions, infrastructure projects, and monitoring systems from TRISF PROJECTS.
                 </p>
               </div>
               <div className="surface rounded-[24px] p-5">
