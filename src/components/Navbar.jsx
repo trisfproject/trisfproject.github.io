@@ -4,6 +4,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 
 const navItems = [
   { label: 'Home', to: '/' },
+  { label: 'About', to: '/#about' },
   { label: 'Projects', to: '/projects' },
   { label: 'Contact', to: '/#contact' },
 ];
@@ -34,7 +35,7 @@ export function Navbar() {
   useEffect(() => {
     if (location.pathname !== '/') return undefined;
 
-    const targets = ['top', 'contact']
+    const targets = ['top', 'about', 'contact']
       .map((id) => document.getElementById(id))
       .filter(Boolean);
 
@@ -64,8 +65,9 @@ export function Navbar() {
 
   const isItemActive = (item) => {
     if (item.to === '/projects') return location.pathname === '/projects';
+    if (item.to === '/#about') return location.pathname === '/' && activeSection === 'about';
     if (item.to === '/#contact') return location.pathname === '/' && activeSection === 'contact';
-    return location.pathname === '/' && activeSection !== 'contact';
+    return location.pathname === '/' && activeSection === 'top';
   };
 
   return (

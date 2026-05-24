@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Mail } from 'lucide-react';
+import { Github, Mail, Send } from 'lucide-react';
 import { Button } from '../components/Button.jsx';
 import { Container } from '../components/Container.jsx';
 import { Reveal } from '../components/Reveal.jsx';
@@ -22,11 +22,11 @@ export function Contact() {
               <Button href="https://github.com/trisfproject" icon={Github} variant="secondary">
                 GitHub
               </Button>
-              <Button href="mailto:contact@trisf.my.id" icon={Mail} variant="secondary">
-                Email
+              <Button href="mailto:trisfproject@gmail.com" icon={Mail} variant="secondary">
+                trisfproject@gmail.com
               </Button>
-              <Button href="https://www.trisf.my.id/" icon={ExternalLink} variant="secondary">
-                Website
+              <Button href="https://t.me/trisf" icon={Send} variant="secondary">
+                Telegram
               </Button>
             </div>
           </div>
