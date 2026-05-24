@@ -70,11 +70,12 @@ export function ProjectsPage() {
             </div>
           </Reveal>
 
-          <motion.div layout className="grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <motion.div layout className="grid items-stretch gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
             {filteredProjects.map((project) => (
               <motion.div
                 layout
                 key={project.title}
+                className="h-full"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.22 }}

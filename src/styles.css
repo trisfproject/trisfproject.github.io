@@ -60,6 +60,13 @@ button {
   text-wrap: balance;
 }
 
+.line-clamp-3 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
 .surface {
   border: 1px solid var(--line);
   background: rgb(24 24 27 / 0.58);

@@ -29,9 +29,9 @@ export function Projects() {
           </Link>
         </Reveal>
       </div>
-      <div className="grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid items-stretch gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
         {featuredProjects.map((project, index) => (
-          <Reveal key={project.title} delay={index * 0.04}>
+          <Reveal key={project.title} delay={index * 0.04} className="h-full">
             <ProjectCard project={project} compact />
           </Reveal>
         ))}
