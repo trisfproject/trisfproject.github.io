@@ -37,12 +37,12 @@ export function Hero() {
             Automate.
           </motion.h1>
           <motion.p
-            className="mt-6 max-w-4xl text-balance text-base leading-7 text-[#a1a1aa] sm:text-lg sm:leading-8 md:text-[1.55rem] md:leading-10"
+            className="mt-6 max-w-4xl text-balance text-base leading-7 text-[#a1a1aa] sm:text-lg sm:leading-8 md:text-[1.5rem] md:leading-10"
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.58, delay: 0.16 }}
           >
-            Building Infrastructure, Automation, Monitoring, Android Development, and Web Solutions.
+            Providing Infrastructure, Automation, Monitoring, Android Development, and Web Solutions.
           </motion.p>
           <motion.div
             className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row"

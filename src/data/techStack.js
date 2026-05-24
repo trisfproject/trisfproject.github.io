@@ -22,7 +22,7 @@ import {
 export const techStackGroups = [
   {
     category: 'Infrastructure',
-    description: 'Runtime, networking, and platform foundations.',
+    description: 'Runtime, networking, provisioning, and platform foundations.',
     items: [
       { name: 'Kubernetes', icon: Boxes },
       { name: 'Docker', icon: Container },
@@ -33,7 +33,7 @@ export const techStackGroups = [
   },
   {
     category: 'Monitoring & Observability',
-    description: 'Metrics, dashboards, uptime signals, and alerting.',
+    description: 'Metrics, dashboards, uptime signals, APM, and alerting.',
     items: [
       { name: 'Grafana', icon: LineChart },
       { name: 'Prometheus', icon: RadioTower },
@@ -44,7 +44,7 @@ export const techStackGroups = [
   },
   {
     category: 'Cloud & Automation',
-    description: 'Cloud delivery, edge controls, and repeatable pipelines.',
+    description: 'Cloud delivery, edge controls, and repeatable deployment pipelines.',
     items: [
       { name: 'GCP', icon: Cloud },
       { name: 'GitHub Actions', icon: Github },
@@ -54,7 +54,7 @@ export const techStackGroups = [
   },
   {
     category: 'Development',
-    description: 'Web, database, mobile, and application engineering.',
+    description: 'Web, database, mobile, and application delivery.',
     items: [
       { name: 'React', icon: Code2 },
       { name: 'Laravel', icon: Layers3 },

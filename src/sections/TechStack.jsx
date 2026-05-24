@@ -9,8 +9,8 @@ export function TechStack() {
       <Reveal>
         <SectionHeader
           eyebrow="Tech stack"
-          title="A practical stack for infrastructure, observability, and delivery."
-          description="Grouped by how the tools are used: platform foundations, monitoring signals, cloud automation, and product development."
+          title="Tools used to design, operate, and ship technical solutions."
+          description="Grouped by service area: platform foundations, monitoring and observability, cloud automation, and application development."
         />
       </Reveal>
       <div className="grid gap-4 lg:grid-cols-2">
