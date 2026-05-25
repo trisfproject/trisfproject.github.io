@@ -5,7 +5,7 @@ export function Footer() {
         <p>© 2026 TRISF PROJECTS</p>
         <a
           href="#top"
-          className="font-medium text-white transition hover:text-[#22c55e] focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70"
+          className="self-end font-medium text-white transition hover:text-[#22c55e] focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 sm:self-auto"
         >
           Back to top
         </a>
