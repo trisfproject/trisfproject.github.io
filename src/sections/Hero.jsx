@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from 'lucide-react';
+import { Info, MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '../components/Button.jsx';
 
@@ -46,11 +46,15 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.58, delay: 0.24 }}
           >
-            <Button href="https://github.com/trisfproject" icon={Github}>
-              GitHub
+            <Button href="#about" icon={Info}>
+              About
             </Button>
-            <Button href="https://www.trisf.my.id/" icon={ExternalLink} variant="secondary">
-              Website
+            <Button
+              href="https://wa.me/62817393300?text=Hello%20TRISF%20PROJECTS%2C%20I%20would%20like%20to%20discuss%20a%20project%20or%20technical%20solution."
+              icon={MessageCircle}
+              variant="secondary"
+            >
+              Contact Us
             </Button>
           </motion.div>
         </div>

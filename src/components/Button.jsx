@@ -1,4 +1,5 @@
 export function Button({ href, children, icon: Icon, variant = 'primary', className = '' }) {
+  const isExternal = /^https?:|^mailto:/.test(href);
   const styles =
     variant === 'primary'
       ? 'border-[#22c55e]/80 bg-[#22c55e] text-[#04100a] hover:bg-[#4ade80]'
@@ -7,8 +8,8 @@ export function Button({ href, children, icon: Icon, variant = 'primary', classN
   return (
     <a
       href={href}
-      target="_blank"
-      rel="noreferrer"
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noreferrer' : undefined}
       className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-full border px-5 text-sm font-semibold transition duration-200 ease-out hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 focus:ring-offset-2 focus:ring-offset-[#050816] active:translate-y-0 ${styles} ${className}`}
     >
       {Icon ? <Icon aria-hidden="true" size={18} strokeWidth={2.2} /> : null}
