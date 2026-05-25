@@ -41,7 +41,7 @@ export function Hero() {
             Building Infrastructure, Automation, Monitoring, Android Development, and Web Solutions.
           </motion.p>
           <motion.div
-            className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row"
+            className="mt-7 flex flex-col gap-2.5 sm:mt-9 sm:flex-row sm:gap-3"
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.58, delay: 0.24 }}

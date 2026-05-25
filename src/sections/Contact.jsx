@@ -9,7 +9,7 @@ export function Contact() {
       <Reveal>
         <div className="surface rounded-[24px] p-5 sm:p-7 md:p-10">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-[#22c55e]">Contact</p>
-          <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-[1fr_auto] md:items-end">
             <div>
               <h2 className="text-balance text-[2rem] font-semibold leading-tight tracking-normal text-white sm:text-4xl md:text-5xl">
                 Have a project, idea, or technical discussion? Let&apos;s connect.
@@ -18,7 +18,7 @@ export function Contact() {
                 Open for project discussions, collaboration, infrastructure solutions, and technical consultation.
               </p>
             </div>
-            <div className="grid gap-3 sm:grid-cols-2 md:flex md:flex-col">
+            <div className="grid gap-2.5 sm:grid-cols-2 sm:gap-3 md:flex md:flex-col">
               <Button href="https://github.com/trisfproject" icon={Github} variant="secondary">
                 GitHub
               </Button>
