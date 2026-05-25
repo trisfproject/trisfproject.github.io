@@ -18,7 +18,7 @@ export function Contact() {
                 Open for project discussions, collaboration, infrastructure solutions, and technical consultation.
               </p>
             </div>
-            <div className="grid gap-2.5 sm:grid-cols-2 sm:gap-3 md:flex md:flex-col">
+            <div className="grid w-full max-w-[260px] gap-2 sm:max-w-none sm:grid-cols-2 sm:gap-3 md:flex md:w-auto md:flex-col">
               <Button href="https://github.com/trisfproject" icon={Github} variant="secondary">
                 GitHub
               </Button>
