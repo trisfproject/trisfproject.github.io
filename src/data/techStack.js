@@ -102,8 +102,10 @@ export const techStackGroups = [
   },
   {
     category: 'Open Source & Ecosystem',
-    description: 'Android ecosystem work, community projects, and open-source contribution.',
+    description: 'Linux ecosystem involvement, Android ROM communities, and collaborative engineering contribution.',
     items: [
+      { name: 'BlankOn Linux', icon: Server },
+      { name: 'XFI', icon: Network },
       { name: 'Komodo OS', icon: Smartphone },
       { name: 'Nusantara Project', icon: Github },
       { name: 'Open Source Contribution', icon: GitMerge },
