@@ -18,17 +18,17 @@ export function Contact() {
                 Open for project discussions, collaboration, infrastructure solutions, and technical consultation.
               </p>
             </div>
-            <div className="grid w-full max-w-[260px] gap-2 sm:max-w-none sm:grid-cols-2 sm:gap-3 md:flex md:w-auto md:flex-col">
-              <Button href="https://github.com/trisfproject" icon={Github} variant="secondary">
+            <div className="grid w-full max-w-[360px] grid-cols-2 gap-2.5 sm:max-w-none sm:gap-3 md:flex md:w-auto md:flex-col">
+              <Button href="https://github.com/trisfproject" icon={Github} variant="secondary" className="w-full">
                 GitHub
               </Button>
-              <Button href="mailto:trisfproject@gmail.com" icon={Mail} variant="secondary">
+              <Button href="mailto:trisfproject@gmail.com" icon={Mail} variant="secondary" className="w-full">
                 Email
               </Button>
-              <Button href="https://t.me/trisf" icon={Send} variant="secondary">
+              <Button href="https://t.me/trisf" icon={Send} variant="secondary" className="w-full">
                 Telegram
               </Button>
-              <Button href="https://t.me/trisfproject" icon={Send} variant="secondary">
+              <Button href="https://t.me/trisfproject" icon={Send} variant="secondary" className="w-full">
                 Channel
               </Button>
             </div>

@@ -41,19 +41,19 @@ export function Hero() {
             Building Infrastructure, Automation, Monitoring, Android Development, and Web Solutions.
           </motion.p>
           <motion.div
-            className="mt-6 flex flex-col items-start gap-2 sm:mt-9 sm:flex-row sm:gap-3"
+            className="mt-6 grid w-full max-w-[320px] grid-cols-2 gap-2 sm:mt-9 sm:flex sm:max-w-none sm:flex-row sm:gap-3"
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.58, delay: 0.24 }}
           >
-            <Button href="#about" icon={Info} className="min-w-32 sm:min-w-0">
+            <Button href="#about" icon={Info} className="w-full sm:w-auto">
               About
             </Button>
             <Button
               href="https://wa.me/62817393300?text=Hello%20TRISF%20PROJECTS%2C%20I%20would%20like%20to%20discuss%20a%20project%20or%20technical%20solution."
               icon={MessageCircle}
               variant="secondary"
-              className="min-w-32 sm:min-w-0"
+              className="w-full sm:w-auto"
             >
               Contact Us
             </Button>
