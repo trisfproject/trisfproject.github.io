@@ -35,28 +35,56 @@ export function Navbar() {
   useEffect(() => {
     if (location.pathname !== '/') return undefined;
 
-    const targets = ['top', 'about', 'contact']
-      .map((id) => document.getElementById(id))
-      .filter(Boolean);
+    let frame = 0;
+    const sectionIds = ['top', 'about', 'projects', 'contact'];
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    const updateActiveSection = () => {
+      const sections = sectionIds
+        .map((id) => document.getElementById(id))
+        .filter(Boolean);
 
-        if (visible?.target?.id) {
-          setActiveSection(visible.target.id);
-        }
-      },
-      {
-        rootMargin: '-28% 0px -58% 0px',
-        threshold: [0.08, 0.18, 0.32],
-      },
-    );
+      if (!sections.length) return;
 
-    targets.forEach((target) => observer.observe(target));
-    return () => observer.disconnect();
+      const readingLine = window.innerHeight * 0.42;
+      const containingSection = sections.find((section) => {
+        const rect = section.getBoundingClientRect();
+        return rect.top <= readingLine && rect.bottom >= readingLine;
+      });
+
+      const active =
+        containingSection ??
+        sections
+          .map((section) => {
+            const rect = section.getBoundingClientRect();
+            return {
+              distance: Math.abs(rect.top + rect.height * 0.35 - readingLine),
+              section,
+            };
+          })
+          .sort((a, b) => a.distance - b.distance)[0]?.section;
+
+      if (active?.id) {
+        setActiveSection((current) => (current === active.id ? current : active.id));
+      }
+    };
+
+    const requestUpdate = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        updateActiveSection();
+        frame = 0;
+      });
+    };
+
+    requestUpdate();
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate);
+
+    return () => {
+      window.removeEventListener('scroll', requestUpdate);
+      window.removeEventListener('resize', requestUpdate);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
   }, [location.pathname]);
 
   useEffect(() => {
@@ -64,7 +92,9 @@ export function Navbar() {
   }, [location.pathname, location.hash]);
 
   const isItemActive = (item) => {
-    if (item.to === '/projects') return location.pathname === '/projects';
+    if (item.to === '/projects') {
+      return location.pathname === '/projects' || (location.pathname === '/' && activeSection === 'projects');
+    }
     if (item.to === '/#about') return location.pathname === '/' && activeSection === 'about';
     if (item.to === '/#contact') return location.pathname === '/' && activeSection === 'contact';
     return location.pathname === '/' && activeSection === 'top';
