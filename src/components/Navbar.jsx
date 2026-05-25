@@ -81,12 +81,12 @@ export function Navbar() {
       <nav className="section-shell flex h-16 items-center justify-between sm:h-[72px]">
         <Link
           to="/"
-          className="flex min-w-0 items-center gap-3 rounded-full focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70"
+          className="flex min-w-0 items-center rounded-full focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 sm:gap-3"
         >
           <span className="grid size-9 shrink-0 place-items-center rounded-2xl border border-[#22c55e]/25 bg-[#22c55e]/10 text-sm font-black text-[#22c55e]">
             T
           </span>
-          <span className="truncate text-xs font-bold tracking-[0.18em] text-white sm:text-sm">
+          <span className="hidden truncate text-xs font-bold tracking-[0.18em] text-white sm:inline sm:text-sm">
             TRISF PROJECTS
           </span>
         </Link>
