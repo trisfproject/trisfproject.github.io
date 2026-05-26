@@ -102,11 +102,10 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 ${
-        scrolled || open
+      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 ${scrolled || open
           ? 'border-b border-white/10 bg-[#050816]/82 shadow-[0_18px_60px_rgb(0_0_0/0.24)] backdrop-blur-2xl supports-[backdrop-filter]:bg-[#050816]/72'
           : 'border-b border-transparent bg-transparent'
-      }`}
+        }`}
     >
       <nav className="section-shell flex h-16 items-center justify-between sm:h-[72px]">
         <Link
@@ -122,11 +121,10 @@ export function Navbar() {
               key={item.to}
               to={item.to}
               aria-current={isItemActive(item) ? 'page' : undefined}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 ${
-                isItemActive(item)
+              className={`rounded-full px-4 py-2 text-sm font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 ${isItemActive(item)
                   ? 'bg-[#22c55e]/12 text-white shadow-[inset_0_0_0_1px_rgb(34_197_94/0.2)]'
                   : 'text-[#a1a1aa] hover:bg-white/[0.05] hover:text-white'
-              }`}
+                }`}
             >
               {item.label}
             </NavLink>
@@ -144,7 +142,7 @@ export function Navbar() {
             <Github size={18} />
           </a>
           <a
-            href="https://www.trisf.my.id/"
+            href="https://trisf.my.id/"
             target="_blank"
             rel="noreferrer"
             aria-label="Website"
@@ -174,11 +172,10 @@ export function Navbar() {
                 key={item.to}
                 to={item.to}
                 aria-current={isItemActive(item) ? 'page' : undefined}
-                className={`block rounded-2xl px-4 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 ${
-                  isItemActive(item)
+                className={`block rounded-2xl px-4 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 ${isItemActive(item)
                     ? 'bg-[#22c55e]/12 text-white'
                     : 'text-[#a1a1aa] hover:bg-white/[0.06] hover:text-white'
-                }`}
+                  }`}
               >
                 {item.label}
               </NavLink>
