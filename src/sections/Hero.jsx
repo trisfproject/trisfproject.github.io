@@ -1,6 +1,87 @@
 import { Info, MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import { Button } from '../components/Button.jsx';
+
+const bootLines = ['> INITIALIZING...', '> LOADING MODULES...', '> READY'];
+
+function TerminalBootLine() {
+  const [text, setText] = useState('');
+  const [fading, setFading] = useState(false);
+
+  useEffect(() => {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) {
+      setText(bootLines.at(-1));
+      return undefined;
+    }
+
+    const timers = [];
+    let cancelled = false;
+
+    const queue = (callback, delay) => {
+      const timer = window.setTimeout(() => {
+        if (!cancelled) callback();
+      }, delay);
+      timers.push(timer);
+    };
+
+    const typeLine = (lineIndex) => {
+      const line = bootLines[lineIndex];
+      let cursor = 0;
+
+      setFading(false);
+      setText('');
+
+      const typeNextCharacter = () => {
+        cursor += 1;
+        setText(line.slice(0, cursor));
+
+        if (cursor < line.length) {
+          queue(typeNextCharacter, 46);
+          return;
+        }
+
+        if (lineIndex < bootLines.length - 1) {
+          queue(() => {
+            setFading(true);
+            queue(() => typeLine(lineIndex + 1), 220);
+          }, 720);
+        }
+      };
+
+      queue(typeNextCharacter, lineIndex === 0 ? 260 : 160);
+    };
+
+    typeLine(0);
+
+    return () => {
+      cancelled = true;
+      timers.forEach((timer) => window.clearTimeout(timer));
+    };
+  }, []);
+
+  return (
+    <motion.div
+      className="mt-5 inline-flex max-w-full rounded-2xl border border-[#22c55e]/20 bg-[#050816]/72 px-3.5 py-2.5 shadow-[0_18px_70px_rgb(34_197_94/0.06)] backdrop-blur-sm sm:mt-6 sm:px-4"
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.14 }}
+      aria-label="System status: ready"
+    >
+      <span
+        className={`font-mono text-[0.72rem] font-medium tracking-[0.14em] text-[#22c55e] transition-opacity duration-200 sm:text-sm ${
+          fading ? 'opacity-0' : 'opacity-100'
+        }`}
+      >
+        {text}
+        <span className="terminal-cursor" aria-hidden="true">
+          ▋
+        </span>
+      </span>
+    </motion.div>
+  );
+}
 
 export function Hero() {
   return (
@@ -32,6 +113,7 @@ export function Hero() {
           >
             TRISF PROJECTS
           </motion.h1>
+          <TerminalBootLine />
           <motion.p
             className="mt-7 max-w-3xl text-balance text-base leading-7 text-[#a1a1aa] sm:text-lg sm:leading-8 md:text-[1.35rem] md:leading-9"
             initial={{ opacity: 0, y: 18 }}

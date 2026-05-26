@@ -67,6 +67,25 @@ button {
   -webkit-line-clamp: 3;
 }
 
+.terminal-cursor {
+  display: inline-block;
+  margin-left: 0.12rem;
+  animation: terminal-cursor-blink 1.15s ease-in-out infinite;
+  color: #86efac;
+}
+
+@keyframes terminal-cursor-blink {
+  0%,
+  42% {
+    opacity: 1;
+  }
+
+  56%,
+  100% {
+    opacity: 0.22;
+  }
+}
+
 .surface {
   border: 1px solid var(--line);
   background: rgb(24 24 27 / 0.58);
@@ -101,6 +120,10 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .terminal-cursor {
+    animation: none;
+  }
+
   *,
   *::before,
   *::after {
