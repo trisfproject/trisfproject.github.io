@@ -17,6 +17,7 @@ export const projects = [
       'Modern branding and web platform for electric vehicle workshop services and EV-related technical solutions.',
     tags: ['React', 'TailwindCSS'],
     github: 'https://github.com/trisfproject',
+    live: 'https://redneck.my.id/',
     type: 'Client Project',
   },
   {
