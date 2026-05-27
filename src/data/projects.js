@@ -38,6 +38,17 @@ export const projects = [
     type: 'Open Source',
   },
   {
+    title: 'XFI - XiaomiHub',
+    category: 'Open Source & Ecosystem',
+    featured: true,
+    description:
+      'Community-driven ecosystem and crowdfunding platform supporting Xiaomi collaboration, Android device initiatives, and open-source technical infrastructure.',
+    tags: ['Community Platform', 'Crowdfunding', 'Android Ecosystem', 'Xiaomi Community', 'Open Source'],
+    github: 'https://github.com/xiaomihub-id',
+    live: 'https://xiaomihub-id.github.io/crowdfunding/',
+    type: 'Community Platform',
+  },
+  {
     title: 'Nyx Platform',
     category: 'Monitoring & Observability',
     featured: true,
@@ -120,6 +131,7 @@ export const projectCategories = [
   'Web Solutions',
   'Android',
   'Open Source & Community',
+  'Open Source & Ecosystem',
   'Infrastructure',
   'Monitoring & Observability',
   'Automation',

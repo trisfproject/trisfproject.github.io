@@ -105,7 +105,7 @@ export const techStackGroups = [
     description: 'Linux ecosystem involvement, Android ROM communities, and collaborative engineering contribution.',
     items: [
       { name: 'BlankOn Linux', icon: Server },
-      { name: 'XFI', icon: Network },
+      { name: 'XFI - XiaomiHub', icon: Network },
       { name: 'Komodo OS', icon: Smartphone },
       { name: 'Nusantara Project', icon: Github },
       { name: 'Open Source Contribution', icon: GitMerge },

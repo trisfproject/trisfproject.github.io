@@ -10,8 +10,8 @@ export function Projects() {
   const featuredOrder = [
     'Telegram Automation Platform',
     'Infrastructure Monitoring Stack',
-    'Cron Monitoring Dashboard',
     'Global Technindo',
+    'XFI - XiaomiHub',
     'REDNECK EV',
     'Nyx Platform',
   ];
