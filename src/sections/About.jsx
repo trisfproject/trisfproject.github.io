@@ -21,7 +21,7 @@ export function About() {
         </Reveal>
         <Reveal delay={0.08}>
           <div className="surface rounded-[24px] p-5 sm:p-6 md:p-8">
-            <p className="text-base leading-8 text-[#d4d4d8] sm:text-lg sm:leading-9">
+            <p className="text-base leading-8 text-text-secondary sm:text-lg sm:leading-9">
               TRISF PROJECTS provides infrastructure engineering, monitoring and observability,
               automation, cloud delivery, Android development, and web solutions for teams that need
               practical technical execution. The focus is dependable systems, clear operations, and
@@ -32,7 +32,7 @@ export function About() {
               {roles.map((role) => (
                 <span
                   key={role}
-                  className="rounded-full border border-white/10 bg-[#050816]/70 px-3.5 py-2 text-sm font-medium text-[#a1a1aa] transition hover:border-[#22c55e]/30 hover:text-white sm:px-4"
+                  className="rounded-full border border-line-site bg-black/[0.02] dark:bg-[#050816]/70 px-3.5 py-2 text-sm font-medium text-text-muted transition hover:border-[#22c55e]/30 hover:text-text-main sm:px-4"
                 >
                   {role}
                 </span>

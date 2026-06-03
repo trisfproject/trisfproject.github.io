@@ -13,7 +13,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen overflow-x-hidden bg-[#050816] text-white">
+      <div className="min-h-screen overflow-x-hidden bg-bg-site text-text-main transition-[background-color,color] duration-300">
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-[#22c55e] focus:px-4 focus:py-3 focus:text-sm focus:font-bold focus:text-[#04100a]"

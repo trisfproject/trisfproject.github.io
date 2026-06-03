@@ -35,18 +35,18 @@ export function ProjectsPage() {
             </p>
             <div className="grid gap-6 lg:grid-cols-[1fr_0.46fr] lg:items-end">
               <div>
-                <h1 className="text-balance text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-6xl">
+                <h1 className="text-balance text-4xl font-semibold leading-tight text-text-main sm:text-5xl md:text-6xl">
                   Engineering archive for production-focused technical work.
                 </h1>
-                <p className="mt-5 max-w-3xl text-base leading-7 text-[#a1a1aa] sm:text-lg sm:leading-8">
+                <p className="mt-5 max-w-3xl text-base leading-7 text-text-muted sm:text-lg sm:leading-8">
                   A clean archive of infrastructure systems, monitoring platforms, automation tools,
                   security workflows, Android and open-source contributions, and web solutions from
                   TRISF PROJECTS.
                 </p>
               </div>
               <div className="surface rounded-[24px] p-5">
-                <p className="text-sm font-semibold text-white">{filteredProjects.length} projects</p>
-                <p className="mt-2 text-sm leading-6 text-[#a1a1aa]">
+                <p className="text-sm font-semibold text-text-main">{filteredProjects.length} projects</p>
+                <p className="mt-2 text-sm leading-6 text-text-muted">
                   Filter by category to scan the work by engineering area.
                 </p>
               </div>
@@ -65,8 +65,8 @@ export function ProjectsPage() {
                   aria-pressed={activeCategory === category}
                   className={`shrink-0 rounded-full border px-4 py-2 text-sm font-semibold transition duration-200 focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 ${
                     activeCategory === category
-                      ? 'border-[#22c55e]/35 bg-[#22c55e]/14 text-white'
-                      : 'border-white/10 bg-white/[0.04] text-[#a1a1aa] hover:border-white/20 hover:text-white'
+                      ? 'border-accent-border bg-[#22c55e]/12 text-text-main dark:text-white'
+                      : 'border-line-site bg-black/[0.03] dark:bg-white/[0.04] text-text-muted hover:border-line-strong hover:text-text-main'
                   }`}
                 >
                   {category}

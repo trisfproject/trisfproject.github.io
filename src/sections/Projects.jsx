@@ -32,7 +32,7 @@ export function Projects() {
         <Reveal delay={0.08}>
           <Link
             to="/projects"
-            className="mb-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-5 text-sm font-semibold text-white transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#22c55e]/35 hover:bg-white/[0.08] focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 md:mb-14"
+            className="mb-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-line-site bg-black/[0.03] dark:bg-white/[0.04] px-5 text-sm font-semibold text-text-main transition duration-200 ease-out hover:-translate-y-0.5 hover:border-[#22c55e]/35 hover:bg-black/[0.06] dark:hover:bg-white/[0.08] focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 md:mb-14"
           >
             View All Projects
             <ArrowRight aria-hidden="true" size={17} />
