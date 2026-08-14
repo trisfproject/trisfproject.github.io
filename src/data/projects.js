@@ -48,7 +48,7 @@ export const projects = [
     type: 'Internal / Client',
   },
   {
-    title: 'Registration',
+    title: 'Event Registration',
     category: 'Web & Digital Products',
     featured: true,
     description: 'Aplikasi untuk pendaftaran peserta dan pengelolaan data pendaftar.',
@@ -79,22 +79,7 @@ export const projects = [
     tags: ['Bot', 'Automation'],
     type: 'Internal Tool',
   },
-  {
-    title: 'Komodo OS',
-    category: 'Software & Open Source',
-    featured: false,
-    description: 'Sistem operasi kustom berbasis Android yang dirancang untuk performa dan efisiensi yang lebih baik.',
-    tags: ['Android', 'AOSP', 'Kotlin'],
-    type: 'Open Source',
-  },
-  {
-    title: 'Nusantara Project',
-    category: 'Software & Open Source',
-    featured: false,
-    description: 'Proyek pengembangan sistem Android secara terbuka (open-source) untuk berbagai perangkat.',
-    tags: ['Android', 'Linux', 'Git'],
-    type: 'Open Source',
-  },
+
   {
     title: 'XFI - XiaomiHub',
     category: 'Software & Open Source',
