@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[100dvh] items-center justify-center pt-24 pb-12 sm:pt-32"
+      className="relative flex min-h-[100dvh] items-center justify-center pt-16 pb-12 sm:pt-32"
     >
       <Container className="relative z-10 flex flex-col items-center justify-center text-center">
         <div className="flex flex-col items-center gap-8 max-w-4xl mx-auto">

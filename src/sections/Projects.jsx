@@ -45,12 +45,12 @@ export function Projects() {
         <div className="flex flex-col border-t border-line-site">
           {featuredProjects.map((project, index) => (
             <Reveal key={project.title} delay={index * 0.1}>
-              <div className="group flex flex-col sm:flex-row sm:items-center py-6 sm:py-8 border-b border-line-site hover:bg-black/[0.01] dark:hover:bg-white/[0.01] transition-colors duration-300">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:gap-12 md:gap-24 w-full px-4 sm:px-6">
-                  <h3 className="text-xl font-semibold text-text-main min-w-[200px] shrink-0">
+              <div className="group flex flex-col py-6 sm:py-8 border-b border-line-site hover:bg-black/[0.01] dark:hover:bg-white/[0.01] transition-colors duration-300">
+                <div className="flex flex-col md:flex-row md:items-center md:gap-24 w-full px-2 sm:px-6">
+                  <h3 className="text-2xl font-semibold text-text-main min-w-[200px] shrink-0">
                     {project.title}
                   </h3>
-                  <p className="mt-2 sm:mt-0 text-text-muted leading-relaxed">
+                  <p className="mt-2 md:mt-0 text-lg text-text-muted leading-relaxed">
                     {project.description}
                   </p>
                 </div>

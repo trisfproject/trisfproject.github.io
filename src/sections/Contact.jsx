@@ -4,7 +4,7 @@ import { Reveal } from '../components/Reveal.jsx';
 
 export function Contact() {
   return (
-    <section id="contact" className="py-20 sm:py-24 bg-surface">
+    <section id="contact" className="py-12 sm:py-24 bg-surface">
       <Container>
         <Reveal>
           <div className="max-w-3xl mx-auto text-center flex flex-col items-center gap-6">
