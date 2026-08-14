@@ -1,40 +1,30 @@
-import { Github, Mail, Send } from 'lucide-react';
-import { Button } from '../components/Button.jsx';
+import { ArrowRight, Mail } from 'lucide-react';
 import { Container } from '../components/Container.jsx';
 import { Reveal } from '../components/Reveal.jsx';
 
 export function Contact() {
   return (
-    <Container id="contact" className="section-fade py-20 sm:py-24 md:py-32">
-      <Reveal>
-        <div className="surface rounded-[24px] p-5 sm:p-7 md:p-10">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-[#22c55e]">Contact</p>
-          <div className="grid gap-6 sm:gap-8 md:grid-cols-[1fr_auto] md:items-end">
-            <div>
-              <h2 className="text-balance text-[2rem] font-semibold leading-tight tracking-normal text-text-main sm:text-4xl md:text-5xl">
-                Have a project, idea, or technical discussion? Let&apos;s connect.
-              </h2>
-              <p className="mt-4 max-w-2xl text-base leading-7 text-text-muted md:leading-8">
-                Open for project discussions, collaboration, infrastructure solutions, and technical consultation.
-              </p>
-            </div>
-            <div className="grid w-full max-w-[360px] grid-cols-2 gap-2.5 sm:max-w-none sm:gap-3 md:flex md:w-auto md:flex-col">
-              <Button href="https://github.com/trisfproject" icon={Github} variant="secondary" className="w-full">
-                GitHub
-              </Button>
-              <Button href="mailto:trisfproject@gmail.com" icon={Mail} variant="secondary" className="w-full">
-                Email
-              </Button>
-              <Button href="https://t.me/trisf" icon={Send} variant="secondary" className="w-full">
-                Telegram
-              </Button>
-              <Button href="https://t.me/trisfproject" icon={Send} variant="secondary" className="w-full">
-                Channel
-              </Button>
-            </div>
+    <section id="contact" className="py-20 sm:py-28 bg-surface">
+      <Container>
+        <Reveal>
+          <div className="max-w-2xl mx-auto text-center surface rounded-3xl p-10 sm:p-16 border border-line-site shadow-sm">
+            <h2 className="mb-4 text-3xl font-bold tracking-tight text-text-main sm:text-4xl">
+              Mari Terhubung
+            </h2>
+            <p className="mb-8 text-lg text-text-muted">
+              Punya kebutuhan atau ide yang ingin dikembangkan?
+            </p>
+            
+            <a
+              href="mailto:hello@trisf.id"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-site px-8 py-4 text-base font-semibold text-white transition hover:bg-accent-site/90 focus:outline-none focus:ring-2 focus:ring-accent-site/50"
+            >
+              <Mail size={18} />
+              Mari ngobrol
+            </a>
           </div>
-        </div>
-      </Reveal>
-    </Container>
+        </Reveal>
+      </Container>
+    </section>
   );
 }

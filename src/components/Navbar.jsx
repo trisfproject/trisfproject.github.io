@@ -1,12 +1,13 @@
-import { ExternalLink, Github, Menu, Sun, Moon, X } from 'lucide-react';
+import { Menu, Sun, Moon, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
 const navItems = [
-  { label: 'Home', to: '/' },
-  { label: 'About', to: '/#about' },
-  { label: 'Projects', to: '/projects' },
-  { label: 'Contact', to: '/#contact' },
+  { label: 'Beranda', to: '/' },
+  { label: 'Layanan', to: '/#services' },
+  { label: 'Project', to: '/projects' },
+  { label: 'Tentang', to: '/#about' },
+  { label: 'Kontak', to: '/#contact' },
 ];
 
 export function Navbar() {
@@ -57,7 +58,7 @@ export function Navbar() {
     if (location.pathname !== '/') return undefined;
 
     let frame = 0;
-    const sectionIds = ['top', 'about', 'projects', 'contact'];
+    const sectionIds = ['top', 'services', 'projects', 'about', 'contact'];
 
     const updateActiveSection = () => {
       const sections = sectionIds
@@ -116,6 +117,7 @@ export function Navbar() {
     if (item.to === '/projects') {
       return location.pathname === '/projects' || (location.pathname === '/' && activeSection === 'projects');
     }
+    if (item.to === '/#services') return location.pathname === '/' && activeSection === 'services';
     if (item.to === '/#about') return location.pathname === '/' && activeSection === 'about';
     if (item.to === '/#contact') return location.pathname === '/' && activeSection === 'contact';
     return location.pathname === '/' && activeSection === 'top';
@@ -123,17 +125,18 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 ${scrolled || open
-          ? 'border-b border-line-site bg-bg-site/82 shadow-site backdrop-blur-2xl supports-[backdrop-filter]:bg-bg-site/72'
+      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 ${
+        scrolled || open
+          ? 'border-b border-line-site bg-bg-site/90 shadow-site backdrop-blur-2xl supports-[backdrop-filter]:bg-bg-site/80'
           : 'border-b border-transparent bg-transparent'
-        }`}
+      }`}
     >
       <nav className="section-shell flex h-16 items-center justify-between sm:h-[72px]">
         <Link
           to="/"
-          className="inline-flex min-w-0 items-center rounded-2xl border border-[#22c55e]/25 bg-[#22c55e]/8 dark:bg-[#22c55e]/10 px-3.5 py-2 text-[0.68rem] font-bold tracking-[0.16em] text-text-main dark:text-white transition duration-200 hover:border-[#22c55e]/35 hover:bg-[#22c55e]/12 dark:hover:bg-[#22c55e]/14 focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 sm:px-4 sm:text-xs"
+          className="inline-flex min-w-0 items-center rounded-full bg-surface px-4 py-2 text-sm font-bold tracking-widest text-text-main transition duration-200 hover:bg-black/[0.03] dark:hover:bg-white/[0.04] focus:outline-none focus:ring-2 focus:ring-accent-site"
         >
-          TRISF PROJECTS
+          TRISF
         </Link>
 
         <div className="hidden items-center gap-1 md:flex">
@@ -142,10 +145,11 @@ export function Navbar() {
               key={item.to}
               to={item.to}
               aria-current={isItemActive(item) ? 'page' : undefined}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 ${isItemActive(item)
-                  ? 'bg-[#22c55e]/12 text-text-main dark:text-white shadow-[inset_0_0_0_1px_rgba(34,197,94,0.24)]'
+              className={`rounded-full px-4 py-2 text-sm font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-accent-site ${
+                isItemActive(item)
+                  ? 'bg-accent-muted text-accent-site'
                   : 'text-text-muted hover:bg-black/[0.03] dark:hover:bg-white/[0.05] hover:text-text-main'
-                }`}
+              }`}
             >
               {item.label}
             </NavLink>
@@ -157,28 +161,10 @@ export function Navbar() {
             type="button"
             onClick={toggleTheme}
             aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
-            className="grid size-10 place-items-center rounded-full border border-line-site bg-black/[0.03] dark:bg-white/[0.04] text-text-muted transition duration-200 hover:-translate-y-0.5 hover:border-[#22c55e]/30 hover:text-text-main focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 cursor-pointer"
+            className="grid size-10 place-items-center rounded-full bg-surface text-text-muted transition duration-200 hover:bg-black/[0.03] dark:hover:bg-white/[0.04] hover:text-text-main focus:outline-none focus:ring-2 focus:ring-accent-site cursor-pointer"
           >
             {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
           </button>
-          <a
-            href="https://github.com/trisfproject"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="GitHub"
-            className="grid size-10 place-items-center rounded-full border border-line-site bg-black/[0.03] dark:bg-white/[0.04] text-text-muted transition duration-200 hover:-translate-y-0.5 hover:border-[#22c55e]/30 hover:text-text-main focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70"
-          >
-            <Github size={18} />
-          </a>
-          <a
-            href="https://trisf.my.id/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Website"
-            className="grid size-10 place-items-center rounded-full border border-line-site bg-black/[0.03] dark:bg-white/[0.04] text-text-muted transition duration-200 hover:-translate-y-0.5 hover:border-[#22c55e]/30 hover:text-text-main focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70"
-          >
-            <ExternalLink size={18} />
-          </a>
         </div>
 
         {/* Mobile menu trigger and theme toggle */}
@@ -187,14 +173,14 @@ export function Navbar() {
             type="button"
             onClick={toggleTheme}
             aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
-            className="grid size-10 place-items-center rounded-full border border-line-site bg-black/[0.03] dark:bg-white/[0.04] text-text-muted transition duration-200 hover:border-[#22c55e]/30 hover:text-text-main focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 cursor-pointer"
+            className="grid size-10 place-items-center rounded-full bg-surface text-text-muted transition duration-200 hover:bg-black/[0.03] dark:hover:bg-white/[0.04] hover:text-text-main focus:outline-none focus:ring-2 focus:ring-accent-site cursor-pointer"
           >
             {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
           </button>
 
           <button
             type="button"
-            className="grid size-10 place-items-center rounded-full border border-line-site bg-black/[0.03] dark:bg-white/[0.04] text-text-main transition hover:border-[#22c55e]/30 focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70"
+            className="grid size-10 place-items-center rounded-full bg-surface text-text-main transition hover:bg-black/[0.03] dark:hover:bg-white/[0.04] focus:outline-none focus:ring-2 focus:ring-accent-site"
             aria-label={open ? 'Close navigation' : 'Open navigation'}
             aria-expanded={open}
             aria-controls="mobile-navigation"
@@ -207,16 +193,17 @@ export function Navbar() {
 
       {open ? (
         <div id="mobile-navigation" className="section-shell pb-4 md:hidden">
-          <div className="rounded-[24px] border border-line-site bg-surface-site/92 p-2 shadow-site backdrop-blur-xl">
+          <div className="rounded-2xl border border-line-site bg-surface p-2 shadow-site">
             {navItems.map((item) => (
               <NavLink
                 key={item.to}
                 to={item.to}
                 aria-current={isItemActive(item) ? 'page' : undefined}
-                className={`block rounded-2xl px-4 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-[#22c55e]/70 ${isItemActive(item)
-                    ? 'bg-[#22c55e]/12 text-text-main dark:text-white'
+                className={`block rounded-xl px-4 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-accent-site ${
+                  isItemActive(item)
+                    ? 'bg-accent-muted text-accent-site'
                     : 'text-text-muted hover:bg-black/[0.04] dark:hover:bg-white/[0.06] hover:text-text-main'
-                  }`}
+                }`}
               >
                 {item.label}
               </NavLink>
@@ -227,3 +214,4 @@ export function Navbar() {
     </header>
   );
 }
+
