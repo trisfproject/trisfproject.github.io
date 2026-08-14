@@ -22,10 +22,10 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 sm:py-32">
+    <section id="services" className="py-16 sm:py-20">
       <Container>
         <Reveal>
-          <div className="mb-16 md:mb-24">
+          <div className="mb-12 md:mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-text-main sm:text-4xl">
               Yang Kami Kerjakan
             </h2>
@@ -38,13 +38,13 @@ export function Services() {
             return (
               <Reveal key={service.title} delay={index * 0.1}>
                 <div className="flex flex-col">
-                  <div className="mb-6 flex items-center text-text-main">
-                    <Icon size={28} strokeWidth={1.5} />
+                  <div className="mb-5 flex items-center text-text-main">
+                    <Icon size={24} strokeWidth={1.5} />
                   </div>
-                  <h3 className="mb-3 text-lg font-semibold text-text-main">
+                  <h3 className="mb-3 text-xl font-semibold text-text-main">
                     {service.title}
                   </h3>
-                  <p className="text-text-muted leading-relaxed max-w-sm">
+                  <p className="text-lg text-text-muted leading-relaxed max-w-sm">
                     {service.description}
                   </p>
                 </div>

@@ -3,17 +3,17 @@ import { Reveal } from '../components/Reveal.jsx';
 
 export function About() {
   return (
-    <section id="about" className="py-24 sm:py-32 bg-surface-strong">
+    <section id="about" className="py-16 sm:py-20 bg-surface-strong">
       <Container>
         <Reveal>
-          <div className="max-w-3xl mx-auto text-center flex flex-col gap-6">
-            <h2 className="text-sm font-semibold tracking-widest uppercase text-text-muted mb-2">
+          <div className="max-w-3xl mx-auto text-center flex flex-col gap-4">
+            <h2 className="text-xs font-semibold tracking-widest uppercase text-text-muted mb-1">
               Tentang TRISF PROJECT
             </h2>
-            <p className="text-3xl font-bold tracking-tight text-text-main sm:text-4xl">
+            <p className="text-2xl font-bold tracking-tight text-text-main sm:text-3xl">
               Teknologi bukan sekadar dibuat. Teknologi harus berguna.
             </p>
-            <p className="text-xl sm:text-2xl leading-relaxed text-text-muted font-light mt-4">
+            <p className="text-lg sm:text-xl leading-relaxed text-text-muted font-light mt-2">
               Di TRISF PROJECT, kami membangun solusi digital berdasarkan kebutuhan nyata dan bagaimana solusi tersebut digunakan.
             </p>
           </div>

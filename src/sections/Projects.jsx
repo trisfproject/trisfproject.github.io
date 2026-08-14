@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Container } from '../components/Container.jsx';
 import { Reveal } from '../components/Reveal.jsx';
@@ -17,9 +17,9 @@ export function Projects() {
     .filter(Boolean);
 
   return (
-    <section id="projects" className="py-24 sm:py-32">
+    <section id="projects" className="py-16 sm:py-20">
       <Container>
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-6">
           <Reveal>
             <h2 className="text-3xl font-bold tracking-tight text-text-main sm:text-4xl mb-4">
               Project
@@ -42,21 +42,14 @@ export function Projects() {
         <div className="flex flex-col border-t border-line-site">
           {featuredProjects.map((project, index) => (
             <Reveal key={project.title} delay={index * 0.1}>
-              <div className="group flex flex-col sm:flex-row sm:items-center justify-between py-8 border-b border-line-site gap-4">
-                <div className="flex flex-col max-w-2xl">
-                  <h3 className="text-xl font-semibold text-text-main group-hover:text-text-main/80 transition-colors">
+              <div className="group flex flex-col sm:flex-row sm:items-center py-6 sm:py-8 border-b border-line-site hover:bg-black/[0.01] dark:hover:bg-white/[0.01] transition-colors duration-300">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:gap-12 md:gap-24 w-full px-4 sm:px-6">
+                  <h3 className="text-xl font-semibold text-text-main min-w-[200px] shrink-0">
                     {project.title}
                   </h3>
-                  <p className="mt-2 text-text-muted leading-relaxed">
+                  <p className="mt-2 sm:mt-0 text-text-muted leading-relaxed">
                     {project.description}
                   </p>
-                </div>
-                
-                <div className="shrink-0 pt-2 sm:pt-0">
-                  <span className="inline-flex items-center justify-center gap-1.5 rounded-full border border-line-site px-4 py-1.5 text-xs font-medium text-text-muted group-hover:bg-black/[0.02] dark:group-hover:bg-white/[0.02] transition">
-                    {project.category}
-                    <ArrowUpRight size={14} className="opacity-40" />
-                  </span>
                 </div>
               </div>
             </Reveal>
