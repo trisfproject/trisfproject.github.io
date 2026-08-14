@@ -3,7 +3,7 @@ import { Reveal } from '../components/Reveal.jsx';
 
 export function About() {
   return (
-    <section id="about" className="py-16 sm:py-20 bg-surface-strong">
+    <section id="about" className="py-16 sm:py-20 bg-surface/50 backdrop-blur-sm border-y border-line-site">
       <Container>
         <Reveal>
           <div className="max-w-4xl mx-auto text-center flex flex-col gap-4">

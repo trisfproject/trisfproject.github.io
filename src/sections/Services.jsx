@@ -36,12 +36,12 @@ export function Services() {
           {services.map((service, index) => {
             return (
               <Reveal key={service.title} delay={index * 0.1}>
-                <div className="flex flex-col py-6 md:py-0 border-b border-line-site md:border-b-0 last:border-b-0">
+                <div className="group flex flex-col py-6 md:py-0 border-b border-line-site md:border-b-0 last:border-b-0">
                   <span className="text-sm font-mono font-medium text-text-muted mb-3 md:mb-4">
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <div className="flex flex-col">
-                    <h3 className="mb-2 text-xl font-semibold text-text-main">
+                    <h3 className="mb-2 text-xl font-bold text-text-main transition-colors duration-300 group-hover:text-accent-site">
                       {service.title}
                     </h3>
                     <p className="text-base text-text-muted leading-relaxed">

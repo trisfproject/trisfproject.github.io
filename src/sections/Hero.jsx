@@ -21,7 +21,7 @@ export function Hero() {
           <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
             <Link
               to="/projects"
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-text-main px-8 py-3.5 text-sm font-semibold text-bg-site transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-text-main/50"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-text-main px-8 py-3.5 text-sm font-semibold text-bg-site transition duration-300 hover:bg-accent-site hover:text-white focus:outline-none focus:ring-2 focus:ring-accent-site"
             >
               Lihat Project
               <ArrowRight size={16} />
@@ -29,7 +29,7 @@ export function Hero() {
             
             <a
               href="#contact"
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold text-text-muted transition hover:text-text-main focus:outline-none focus:ring-2 focus:ring-line-strong"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold text-text-muted transition duration-300 hover:text-accent-site focus:outline-none focus:ring-2 focus:ring-accent-site"
             >
               Hubungi Kami
             </a>

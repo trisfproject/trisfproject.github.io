@@ -4,10 +4,10 @@ import { Reveal } from '../components/Reveal.jsx';
 
 export function Contact() {
   return (
-    <section id="contact" className="py-12 sm:py-24 bg-surface">
+    <section id="contact" className="py-12 sm:py-24">
       <Container>
         <Reveal>
-          <div className="max-w-3xl mx-auto text-center flex flex-col items-center gap-6">
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center gap-6 bg-surface/50 backdrop-blur-md border border-line-site rounded-3xl p-8 sm:p-16 shadow-site transition-colors hover:border-line-strong hover:bg-surface">
             <p className="text-xs font-semibold tracking-widest uppercase text-text-muted">
               MARI TERHUBUNG
             </p>
@@ -20,7 +20,7 @@ export function Contact() {
             
             <a
               href="mailto:hello@trisf.id"
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-text-main px-8 py-3.5 text-sm font-semibold text-bg-site transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-text-main/50"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-text-main px-8 py-3.5 text-sm font-semibold text-bg-site transition duration-300 hover:bg-accent-site hover:text-white focus:outline-none focus:ring-2 focus:ring-accent-site"
             >
               Hubungi Kami
               <ArrowRight size={16} />
