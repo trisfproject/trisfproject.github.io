@@ -32,19 +32,19 @@ export function Services() {
           </div>
         </Reveal>
 
-        <div className="flex flex-col border-t border-line-site">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-8 lg:gap-12">
           {services.map((service, index) => {
             return (
               <Reveal key={service.title} delay={index * 0.1}>
-                <div className="group flex flex-col md:flex-row py-8 border-b border-line-site gap-2 md:gap-12 hover:bg-black/[0.01] dark:hover:bg-white/[0.01] transition-colors duration-300">
-                  <span className="text-sm font-mono font-medium text-text-muted md:w-16 md:pt-1">
+                <div className="flex flex-col py-6 md:py-0 border-b border-line-site md:border-b-0 last:border-b-0">
+                  <span className="text-sm font-mono font-medium text-text-muted mb-3 md:mb-4">
                     {String(index + 1).padStart(2, '0')}
                   </span>
-                  <div className="flex flex-col flex-1">
-                    <h3 className="mb-2 text-xl md:text-2xl font-semibold text-text-main">
+                  <div className="flex flex-col">
+                    <h3 className="mb-2 text-xl font-semibold text-text-main">
                       {service.title}
                     </h3>
-                    <p className="text-base md:text-lg text-text-muted leading-relaxed max-w-2xl">
+                    <p className="text-base text-text-muted leading-relaxed">
                       {service.description}
                     </p>
                   </div>
