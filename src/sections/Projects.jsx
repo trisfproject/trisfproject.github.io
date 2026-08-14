@@ -17,6 +17,14 @@ export function Projects() {
     .map((title) => projects.find((project) => project.title === title))
     .filter(Boolean);
 
+  const getProjectColors = (project) => {
+    if (project.title === 'LANGIT RMS') return { dot: 'bg-brand-green', hover: 'group-hover:text-brand-green' };
+    if (project.title === 'NYX') return { dot: 'bg-brand-blue', hover: 'group-hover:text-brand-blue' };
+    if (project.category === 'Software & Open Source') return { dot: 'bg-brand-purple', hover: 'group-hover:text-brand-purple' };
+    if (project.category === 'Web & Digital Products') return { dot: 'bg-brand-orange', hover: 'group-hover:text-brand-orange' };
+    return { dot: 'bg-brand-blue', hover: 'group-hover:text-brand-blue' };
+  };
+
   return (
     <section id="projects" className="py-16 sm:py-20">
       <Container>
@@ -45,7 +53,8 @@ export function Projects() {
             <Reveal key={project.title} delay={index * 0.1}>
               <div className="group flex flex-col py-6 sm:py-8 border-b border-line-site hover:bg-black/[0.01] dark:hover:bg-white/[0.01] transition-colors duration-300">
                 <div className="flex flex-col md:flex-row md:items-center md:gap-24 w-full px-2 sm:px-6">
-                  <h3 className="text-2xl font-bold text-text-main min-w-[200px] shrink-0 transition-colors duration-300 group-hover:text-accent-site">
+                  <h3 className={`text-2xl font-bold text-text-main min-w-[200px] shrink-0 flex items-center gap-3 transition-colors duration-300 ${getProjectColors(project).hover}`}>
+                    <span className={`size-2 rounded-full ${getProjectColors(project).dot}`} />
                     {project.title}
                   </h3>
                   <p className="mt-2 md:mt-0 text-lg text-text-muted leading-relaxed">

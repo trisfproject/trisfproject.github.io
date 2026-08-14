@@ -7,16 +7,22 @@ const services = [
     title: 'Web & Digital Products',
     description: 'Website, aplikasi web, dan solusi digital untuk kebutuhan bisnis dan operasional.',
     icon: Layout,
+    color: 'text-brand-green',
+    hoverColor: 'group-hover:text-brand-green',
   },
   {
     title: 'Infrastructure & Automation',
     description: 'Sistem infrastruktur, monitoring, integrasi, dan otomasi untuk mendukung operasional.',
     icon: Server,
+    color: 'text-brand-blue',
+    hoverColor: 'group-hover:text-brand-blue',
   },
   {
     title: 'Software & Open Source',
     description: 'Pengembangan software dan berbagai solusi berbasis teknologi open source.',
     icon: Smartphone,
+    color: 'text-brand-purple',
+    hoverColor: 'group-hover:text-brand-purple',
   },
 ];
 
@@ -37,11 +43,11 @@ export function Services() {
             return (
               <Reveal key={service.title} delay={index * 0.1}>
                 <div className="group flex flex-col py-6 md:py-0 border-b border-line-site md:border-b-0 last:border-b-0">
-                  <span className="text-sm font-mono font-medium text-text-muted mb-3 md:mb-4">
+                  <span className={`text-sm font-mono font-bold mb-3 md:mb-4 transition-colors duration-300 text-text-muted ${service.color}`}>
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <div className="flex flex-col">
-                    <h3 className="mb-2 text-xl font-bold text-text-main transition-colors duration-300 group-hover:text-accent-site">
+                    <h3 className={`mb-2 text-xl font-bold text-text-main transition-colors duration-300 ${service.hoverColor}`}>
                       {service.title}
                     </h3>
                     <p className="text-base text-text-muted leading-relaxed">

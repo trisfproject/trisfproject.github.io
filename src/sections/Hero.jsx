@@ -6,8 +6,12 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[100dvh] items-center justify-center pt-16 pb-12 sm:pt-32"
+      className="relative flex min-h-[100dvh] items-center justify-center pt-16 pb-12 sm:pt-32 overflow-hidden"
     >
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute -top-[20%] -left-[10%] w-[60%] h-[60%] rounded-full bg-brand-green/10 blur-[100px] opacity-70" />
+        <div className="absolute top-[10%] -right-[10%] w-[50%] h-[50%] rounded-full bg-brand-blue/10 blur-[100px] opacity-60" />
+      </div>
       <div className="hero-grid" />
       <Container className="relative z-10 flex flex-col items-center justify-center text-center">
         <div className="flex flex-col items-center gap-8 max-w-4xl mx-auto">
