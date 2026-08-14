@@ -1,4 +1,4 @@
-import { Home, LayoutGrid, Folder, Info, Phone, Sun, Moon } from 'lucide-react';
+import { Home, LayoutGrid, Folder, Info, Phone, Sun, Moon, ExternalLink } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
@@ -157,6 +157,16 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center gap-2 md:flex">
+          <a
+            href="https://trisf.my.id/"
+            aria-label="Main Web"
+            title="Main Web"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="grid size-10 place-items-center rounded-full bg-surface text-text-muted transition duration-200 hover:bg-black/[0.03] dark:hover:bg-white/[0.04] hover:text-text-main focus:outline-none focus:ring-2 focus:ring-accent-site cursor-pointer"
+          >
+            <ExternalLink size={18} />
+          </a>
           <button
             type="button"
             onClick={toggleTheme}
@@ -169,6 +179,16 @@ export function Navbar() {
 
         {/* Mobile menu trigger and theme toggle */}
         <div className="flex items-center gap-2 md:hidden">
+          <a
+            href="https://trisf.my.id/"
+            aria-label="Main Web"
+            title="Main Web"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="grid size-10 place-items-center rounded-full bg-surface text-text-muted transition duration-200 hover:bg-black/[0.03] dark:hover:bg-white/[0.04] hover:text-text-main focus:outline-none focus:ring-2 focus:ring-accent-site cursor-pointer"
+          >
+            <ExternalLink size={18} />
+          </a>
           <button
             type="button"
             onClick={toggleTheme}
