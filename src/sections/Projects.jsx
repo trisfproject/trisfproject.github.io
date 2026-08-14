@@ -20,6 +20,11 @@ export function Projects() {
   const getProjectColors = (project) => {
     if (project.title === 'LANGIT RMS') return { dot: 'bg-brand-green', hover: 'group-hover:text-brand-green' };
     if (project.title === 'NYX') return { dot: 'bg-brand-blue', hover: 'group-hover:text-brand-blue' };
+    if (project.title === 'REDNECK EV') return { dot: 'bg-brand-orange', hover: 'group-hover:text-brand-orange' };
+    if (project.title === 'E-Voting') return { dot: 'bg-brand-purple', hover: 'group-hover:text-brand-purple' };
+    if (project.title === 'Event Management') return { dot: 'bg-brand-amber', hover: 'group-hover:text-brand-amber' };
+    if (project.title === 'Telegram Bot') return { dot: 'bg-brand-cyan', hover: 'group-hover:text-brand-cyan' };
+    
     if (project.category === 'Software & Open Source') return { dot: 'bg-brand-purple', hover: 'group-hover:text-brand-purple' };
     if (project.category === 'Web & Digital Products') return { dot: 'bg-brand-orange', hover: 'group-hover:text-brand-orange' };
     return { dot: 'bg-brand-blue', hover: 'group-hover:text-brand-blue' };
@@ -48,16 +53,16 @@ export function Projects() {
           </Reveal>
         </div>
         
-        <div className="flex flex-col border-t border-line-site">
+        <div className="flex flex-col border-t border-line-site mt-4 md:mt-0">
           {featuredProjects.map((project, index) => (
             <Reveal key={project.title} delay={index * 0.1}>
-              <div className="group flex flex-col py-6 sm:py-8 border-b border-line-site hover:bg-black/[0.01] dark:hover:bg-white/[0.01] transition-colors duration-300">
-                <div className="flex flex-col md:flex-row md:items-center md:gap-24 w-full px-2 sm:px-6">
-                  <h3 className={`text-2xl font-bold text-text-main min-w-[200px] shrink-0 flex items-center gap-3 transition-colors duration-300 ${getProjectColors(project).hover}`}>
+              <div className="group flex flex-col py-5 sm:py-8 border-b border-line-site/50 md:border-line-site hover:bg-black/[0.01] dark:hover:bg-white/[0.01] transition-colors duration-300">
+                <div className="flex flex-col md:flex-row md:items-center md:gap-24 w-full px-1 sm:px-6">
+                  <h3 className={`text-[1.35rem] sm:text-2xl font-bold text-text-main min-w-[200px] shrink-0 flex items-center gap-3 transition-colors duration-300 ${getProjectColors(project).hover}`}>
                     <span className={`size-2 rounded-full ${getProjectColors(project).dot}`} />
                     {project.title}
                   </h3>
-                  <p className="mt-2 md:mt-0 text-lg text-text-muted leading-relaxed">
+                  <p className="mt-1.5 md:mt-0 text-[0.95rem] sm:text-lg text-text-muted leading-relaxed font-light">
                     {project.description}
                   </p>
                 </div>

@@ -12,7 +12,7 @@ export function Contact() {
               <div className="absolute top-1/2 left-1/4 -translate-y-1/2 -translate-x-1/2 w-[60%] h-[120%] rounded-full bg-brand-blue/10 blur-[80px]" />
               <div className="absolute top-1/2 right-1/4 -translate-y-1/2 translate-x-1/2 w-[60%] h-[120%] rounded-full bg-brand-orange/10 blur-[80px]" />
             </div>
-            <div className="text-center flex flex-col items-center gap-6 bg-surface border border-line-site rounded-3xl p-8 sm:p-16 shadow-sm transition-colors hover:border-line-strong">
+            <div className="text-center flex flex-col items-center gap-4 sm:gap-6 bg-surface border border-line-site rounded-[2rem] sm:rounded-3xl p-8 sm:p-16 shadow-sm transition-colors hover:border-line-strong mx-4 sm:mx-0">
               <p className="text-xs font-semibold tracking-widest uppercase text-text-muted">
                 MARI TERHUBUNG
               </p>

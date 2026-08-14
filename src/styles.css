@@ -14,6 +14,8 @@
   --brand-blue: #2563eb; /* blue-600 */
   --brand-orange: #ea580c; /* orange-600 */
   --brand-purple: #9333ea; /* purple-600 */
+  --brand-amber: #d97706; /* amber-600 */
+  --brand-cyan: #0891b2; /* cyan-600 */
   --accent-muted: rgba(22, 163, 74, 0.08);
   --accent-border: rgba(22, 163, 74, 0.2);
   --text-main: #18181b; /* zinc-900 */
@@ -45,6 +47,8 @@
   --brand-blue: #3b82f6; /* blue-500 */
   --brand-orange: #f97316; /* orange-500 */
   --brand-purple: #a855f7; /* purple-500 */
+  --brand-amber: #f59e0b; /* amber-500 */
+  --brand-cyan: #06b6d4; /* cyan-500 */
   --accent-muted: rgba(34, 197, 94, 0.1);
   --accent-border: rgba(34, 197, 94, 0.2);
   --text-main: #fafafa;
@@ -66,6 +70,8 @@
   --color-brand-blue: var(--brand-blue);
   --color-brand-orange: var(--brand-orange);
   --color-brand-purple: var(--brand-purple);
+  --color-brand-amber: var(--brand-amber);
+  --color-brand-cyan: var(--brand-cyan);
   --color-accent-muted: var(--accent-muted);
   --color-accent-border: var(--accent-border);
 }

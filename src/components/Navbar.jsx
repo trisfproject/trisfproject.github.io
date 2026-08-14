@@ -201,7 +201,7 @@ export function Navbar() {
 
     {/* Mobile Floating Navigation */}
     <nav
-      className="md:hidden fixed left-1/2 z-50 flex -translate-x-1/2 items-center justify-center gap-1 rounded-[2rem] border border-line-site bg-surface/90 px-3 py-2 shadow-site backdrop-blur-2xl supports-[backdrop-filter]:bg-surface/80"
+      className="md:hidden fixed left-1/2 z-50 flex -translate-x-1/2 items-center justify-center gap-1 rounded-[2rem] border border-line-site bg-bg-site/95 px-2 py-1.5 shadow-sm backdrop-blur-2xl supports-[backdrop-filter]:bg-bg-site/80"
       style={{ bottom: 'max(1.5rem, env(safe-area-inset-bottom))' }}
     >
       {navItems.map((item) => {
@@ -212,14 +212,14 @@ export function Navbar() {
             key={item.to}
             to={item.to}
             aria-current={active ? 'page' : undefined}
-            className={`flex flex-1 min-w-[3.5rem] flex-col items-center justify-center gap-1 rounded-2xl p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-site ${
+            className={`flex flex-1 min-w-[3.5rem] flex-col items-center justify-center gap-1 rounded-2xl p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green ${
               active
-                ? 'text-accent-site'
+                ? 'text-brand-green'
                 : 'text-text-muted hover:text-text-main'
             }`}
           >
-            <div className={`grid size-8 place-items-center rounded-full transition-colors ${active ? 'bg-accent-muted' : 'bg-transparent'}`}>
-              <Icon size={18} strokeWidth={active ? 2.5 : 2} />
+            <div className={`grid size-7 place-items-center rounded-full transition-colors ${active ? 'bg-brand-green/10' : 'bg-transparent'}`}>
+              <Icon size={18} strokeWidth={active ? 2 : 1.5} />
             </div>
             <span className={`text-[9px] font-medium leading-none ${active ? 'font-semibold' : ''}`}>
               {item.label}

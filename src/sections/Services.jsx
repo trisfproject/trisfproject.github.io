@@ -42,15 +42,15 @@ export function Services() {
           {services.map((service, index) => {
             return (
               <Reveal key={service.title} delay={index * 0.1}>
-                <div className="group flex flex-col py-6 md:py-0 border-b border-line-site md:border-b-0 last:border-b-0">
-                  <span className={`text-sm font-mono font-bold mb-3 md:mb-4 transition-colors duration-300 text-text-muted ${service.color}`}>
+                <div className="group flex flex-col py-5 md:py-0 border-b border-line-site/40 md:border-b-0 last:border-b-0">
+                  <span className={`text-xs md:text-sm font-mono font-bold mb-2 md:mb-4 transition-colors duration-300 text-text-muted ${service.color}`}>
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <div className="flex flex-col">
-                    <h3 className={`mb-2 text-xl font-bold text-text-main transition-colors duration-300 ${service.hoverColor}`}>
+                    <h3 className={`mb-1.5 md:mb-2 text-[1.15rem] md:text-xl font-bold text-text-main transition-colors duration-300 ${service.hoverColor}`}>
                       {service.title}
                     </h3>
-                    <p className="text-base text-text-muted leading-relaxed">
+                    <p className="text-[0.9rem] md:text-base text-text-muted leading-relaxed font-light">
                       {service.description}
                     </p>
                   </div>

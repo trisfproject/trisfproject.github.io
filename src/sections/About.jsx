@@ -10,10 +10,10 @@ export function About() {
             <p className="text-xs font-semibold tracking-widest uppercase text-text-muted mb-1">
               Tentang TRISF PROJECT
             </p>
-            <h2 className="text-3xl font-bold tracking-tight text-text-main sm:text-4xl text-balance">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-text-main text-balance leading-tight">
               Teknologi bukan sekadar dibuat. Teknologi harus berguna.
             </h2>
-            <p className="text-lg sm:text-xl leading-relaxed text-text-muted font-light mt-2 max-w-3xl mx-auto">
+            <p className="text-[0.95rem] sm:text-xl leading-relaxed text-text-muted font-light mt-1 md:mt-2 max-w-3xl mx-auto">
               Di TRISF PROJECT, kami membangun solusi digital berdasarkan kebutuhan nyata dan cara solusi tersebut digunakan.
             </p>
           </div>
