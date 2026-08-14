@@ -12,7 +12,7 @@ export function Contact() {
               MARI TERHUBUNG
             </p>
             <h2 className="text-3xl font-bold tracking-tight text-text-main sm:text-4xl lg:text-5xl text-balance leading-tight">
-              Punya kebutuhan digital yang ingin diwujudkan?
+              Ada kebutuhan yang ingin diwujudkan?
             </h2>
             <p className="text-lg text-text-muted max-w-2xl text-balance mb-2">
               Ceritakan kebutuhan Anda. Kami akan membantu memahami kebutuhan tersebut dan mencari solusi yang tepat.
