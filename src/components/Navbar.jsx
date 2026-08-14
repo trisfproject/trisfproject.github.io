@@ -5,7 +5,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 const navItems = [
   { label: 'Beranda', to: '/', icon: Home },
   { label: 'Layanan', to: '/#services', icon: LayoutGrid },
-  { label: 'Project', to: '/projects', icon: Folder },
+  { label: 'Project', to: '/#projects', icon: Folder },
   { label: 'Tentang', to: '/#about', icon: Info },
   { label: 'Kontak', to: '/#contact', icon: Phone },
 ];
@@ -113,9 +113,7 @@ export function Navbar() {
   }, [location.pathname, location.hash]);
 
   const isItemActive = (item) => {
-    if (item.to === '/projects') {
-      return location.pathname === '/projects' || (location.pathname === '/' && activeSection === 'projects');
-    }
+    if (item.to === '/#projects') return location.pathname === '/' && activeSection === 'projects';
     if (item.to === '/#services') return location.pathname === '/' && activeSection === 'services';
     if (item.to === '/#about') return location.pathname === '/' && activeSection === 'about';
     if (item.to === '/#contact') return location.pathname === '/' && activeSection === 'contact';
