@@ -78,15 +78,6 @@ export const projects = [
     description: 'Bot Telegram untuk memberikan informasi dan menjalankan berbagai tugas secara otomatis.',
     tags: ['Bot', 'Automation'],
     type: 'Internal Tool',
-  },
-
-  {
-    title: 'XFI - XiaomiHub',
-    category: 'Software & Open Source',
-    featured: false,
-    description: 'Platform komunitas dan penggalangan dana untuk mendukung pengembangan perangkat Xiaomi.',
-    tags: ['Community', 'Android'],
-    type: 'Community Platform',
   }
 ];
 
