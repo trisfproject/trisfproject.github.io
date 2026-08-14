@@ -8,6 +8,7 @@ export function Hero() {
       id="top"
       className="relative flex min-h-[100dvh] items-center justify-center pt-16 pb-12 sm:pt-32"
     >
+      <div className="hero-grid" />
       <Container className="relative z-10 flex flex-col items-center justify-center text-center">
         <div className="flex flex-col items-center gap-8 max-w-4xl mx-auto">
           <h1 className="text-4xl font-extrabold tracking-tight text-text-main sm:text-5xl md:text-6xl lg:text-7xl text-balance leading-[1.15]">

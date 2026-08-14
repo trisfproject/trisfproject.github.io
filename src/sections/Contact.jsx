@@ -7,7 +7,7 @@ export function Contact() {
     <section id="contact" className="py-12 sm:py-24">
       <Container>
         <Reveal>
-          <div className="max-w-4xl mx-auto text-center flex flex-col items-center gap-6 bg-surface/50 backdrop-blur-md border border-line-site rounded-3xl p-8 sm:p-16 shadow-site transition-colors hover:border-line-strong hover:bg-surface">
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center gap-6 bg-surface border border-line-site rounded-3xl p-8 sm:p-16 shadow-sm transition-colors hover:border-line-strong">
             <p className="text-xs font-semibold tracking-widest uppercase text-text-muted">
               MARI TERHUBUNG
             </p>
