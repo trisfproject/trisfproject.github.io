@@ -10,18 +10,18 @@ export function Hero() {
     >
       <Container className="relative z-10 flex flex-col items-center justify-center text-center">
         <div className="flex flex-col items-center gap-8 max-w-4xl mx-auto">
-          <h1 className="text-5xl font-extrabold tracking-tight text-text-main sm:text-6xl md:text-7xl lg:text-8xl text-balance leading-[1.1]">
+          <h1 className="text-4xl font-extrabold tracking-tight text-text-main sm:text-5xl md:text-6xl lg:text-7xl text-balance leading-[1.15]">
             Dari ide menjadi<br className="hidden sm:block" /> solusi digital.
           </h1>
 
-          <p className="max-w-xl text-lg text-text-muted sm:text-xl text-balance leading-relaxed">
+          <p className="max-w-xl text-lg text-text-muted sm:text-xl text-balance leading-relaxed px-4 sm:px-0">
             Kami mengembangkan website, aplikasi, dan sistem untuk berbagai kebutuhan bisnis dan operasional Anda.
           </p>
 
-          <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">
+          <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
             <Link
               to="/projects"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-text-main px-8 py-3.5 text-sm font-semibold text-bg-site transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-text-main/50"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-text-main px-8 py-3.5 text-sm font-semibold text-bg-site transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-text-main/50"
             >
               Lihat Project
               <ArrowRight size={16} />
@@ -29,7 +29,7 @@ export function Hero() {
             
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold text-text-muted transition hover:text-text-main focus:outline-none focus:ring-2 focus:ring-line-strong"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold text-text-muted transition hover:text-text-main focus:outline-none focus:ring-2 focus:ring-line-strong"
             >
               Hubungi Kami
             </a>

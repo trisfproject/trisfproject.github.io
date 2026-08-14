@@ -194,7 +194,7 @@ export function Navbar() {
             key={item.to}
             to={item.to}
             aria-current={active ? 'page' : undefined}
-            className={`flex w-[4rem] flex-col items-center justify-center gap-1 rounded-2xl p-1.5 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-site ${
+            className={`flex flex-1 min-w-[3.5rem] flex-col items-center justify-center gap-1 rounded-2xl p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-site ${
               active
                 ? 'text-accent-site'
                 : 'text-text-muted hover:text-text-main'
