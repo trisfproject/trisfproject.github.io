@@ -8,8 +8,6 @@ export function Projects() {
   const featuredOrder = [
     'NYX',
     'LANGIT RMS',
-    'Sewa AC Cikarang',
-    'Global Teknindo',
     'REDNECK EV',
     'E-Voting',
     'Event Management',

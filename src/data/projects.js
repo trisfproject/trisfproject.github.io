@@ -15,14 +15,7 @@ export const projects = [
     tags: ['Web App', 'Management'],
     type: 'Client Project',
   },
-  {
-    title: 'Sewa AC Cikarang',
-    category: 'Web & Digital Products',
-    featured: true,
-    description: 'Website layanan sewa AC untuk rumah, kantor, proyek, gudang, dan tempat usaha.',
-    tags: ['Website', 'Service'],
-    type: 'Client Project',
-  },
+
   {
     title: 'REDNECK EV',
     category: 'Web & Digital Products',
@@ -31,14 +24,7 @@ export const projects = [
     tags: ['Platform', 'EV'],
     type: 'Client Project',
   },
-  {
-    title: 'Global Teknindo',
-    category: 'Web & Digital Products',
-    featured: true,
-    description: 'Website company profile untuk memperkenalkan perusahaan dan layanan bisnis.',
-    tags: ['Company Profile', 'Business'],
-    type: 'Client Project',
-  },
+
   {
     title: 'E-Voting',
     category: 'Web & Digital Products',
