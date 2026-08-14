@@ -29,7 +29,6 @@ export const projects = [
     featured: true,
     description: 'Platform digital untuk kebutuhan dan informasi seputar kendaraan listrik.',
     tags: ['Platform', 'EV'],
-    live: 'https://redneck.my.id/',
     type: 'Client Project',
   },
   {
@@ -86,7 +85,6 @@ export const projects = [
     featured: false,
     description: 'Android custom ROM ecosystem project focused on performance optimization.',
     tags: ['Android', 'AOSP', 'Kotlin'],
-    github: 'https://github.com/trisfproject',
     type: 'Open Source',
   },
   {
@@ -95,7 +93,6 @@ export const projects = [
     featured: false,
     description: 'Open-source Android ecosystem contribution and collaborative device development project.',
     tags: ['Android', 'Linux', 'Git'],
-    github: 'https://github.com/trisfproject',
     type: 'Open Source',
   },
   {
@@ -104,8 +101,6 @@ export const projects = [
     featured: false,
     description: 'Community-driven ecosystem and crowdfunding platform supporting Xiaomi collaboration.',
     tags: ['Community', 'Android'],
-    github: 'https://github.com/xiaomihub-id',
-    live: 'https://xiaomihub-id.github.io/crowdfunding/',
     type: 'Community Platform',
   }
 ];
