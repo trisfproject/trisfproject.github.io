@@ -11,6 +11,9 @@ export function Projects() {
     'Sewa AC Cikarang',
     'Global Teknindo',
     'REDNECK EV',
+    'E-Voting',
+    'Event Management',
+    'Telegram Bot',
   ];
   const featuredProjects = featuredOrder
     .map((title) => projects.find((project) => project.title === title))

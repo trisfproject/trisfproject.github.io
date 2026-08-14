@@ -75,7 +75,7 @@ export const projects = [
     title: 'Telegram Bot',
     category: 'Infrastructure & Automation',
     featured: true,
-    description: 'Bot Telegram untuk memberikan informasi dan menjalankan berbagai tugas secara otomatis.',
+    description: 'Bot Telegram untuk membantu kebutuhan informasi dan fungsi otomatis.',
     tags: ['Bot', 'Automation'],
     type: 'Internal Tool',
   }
