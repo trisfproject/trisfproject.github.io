@@ -5,17 +5,17 @@ import { Reveal } from '../components/Reveal.jsx';
 const services = [
   {
     title: 'Web & Digital Products',
-    description: 'Website, aplikasi web, dan solusi digital untuk berbagai kebutuhan.',
+    description: 'Website, aplikasi web, dan solusi digital untuk kebutuhan bisnis dan operasional.',
     icon: Layout,
   },
   {
     title: 'Infrastructure & Automation',
-    description: 'Infrastruktur, monitoring, otomasi, dan sistem pendukung operasional.',
+    description: 'Sistem infrastruktur, monitoring, integrasi, dan otomasi untuk mendukung operasional.',
     icon: Server,
   },
   {
-    title: 'Android & Open Source',
-    description: 'Pengembangan aplikasi, sistem, dan berbagai project berbasis open source.',
+    title: 'Software & Open Source',
+    description: 'Pengembangan software dan berbagai solusi berbasis teknologi open source.',
     icon: Smartphone,
   },
 ];

@@ -82,7 +82,7 @@ export const projects = [
   },
   {
     title: 'Komodo OS',
-    category: 'Android & Open Source',
+    category: 'Software & Open Source',
     featured: false,
     description: 'Android custom ROM ecosystem project focused on performance optimization.',
     tags: ['Android', 'AOSP', 'Kotlin'],
@@ -91,7 +91,7 @@ export const projects = [
   },
   {
     title: 'Nusantara Project',
-    category: 'Android & Open Source',
+    category: 'Software & Open Source',
     featured: false,
     description: 'Open-source Android ecosystem contribution and collaborative device development project.',
     tags: ['Android', 'Linux', 'Git'],
@@ -100,7 +100,7 @@ export const projects = [
   },
   {
     title: 'XFI - XiaomiHub',
-    category: 'Android & Open Source',
+    category: 'Software & Open Source',
     featured: false,
     description: 'Community-driven ecosystem and crowdfunding platform supporting Xiaomi collaboration.',
     tags: ['Community', 'Android'],
@@ -114,6 +114,6 @@ export const projectCategories = [
   'All',
   'Web & Digital Products',
   'Infrastructure & Automation',
-  'Android & Open Source'
+  'Software & Open Source'
 ];
 

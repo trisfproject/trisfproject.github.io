@@ -136,7 +136,7 @@ export function Navbar() {
           to="/"
           className="inline-flex min-w-0 items-center rounded-full bg-surface px-4 py-2 text-sm font-bold tracking-widest text-text-main transition duration-200 hover:bg-black/[0.03] dark:hover:bg-white/[0.04] focus:outline-none focus:ring-2 focus:ring-accent-site"
         >
-          TRISF
+          TRISF PROJECT
         </Link>
 
         <div className="hidden items-center gap-1 md:flex">

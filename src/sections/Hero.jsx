@@ -1,4 +1,4 @@
-import { ArrowRight, MessageSquare } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Container } from '../components/Container.jsx';
 
@@ -11,11 +11,11 @@ export function Hero() {
       <Container className="relative z-10 flex flex-col items-center justify-center text-center">
         <div className="flex flex-col items-center gap-8 max-w-4xl mx-auto">
           <h1 className="text-5xl font-extrabold tracking-tight text-text-main sm:text-6xl md:text-7xl lg:text-8xl text-balance leading-[1.1]">
-            TRISF membuat<br className="hidden sm:block" /> solusi teknologi.
+            Dari ide menjadi<br className="hidden sm:block" /> solusi digital.
           </h1>
 
           <p className="max-w-xl text-lg text-text-muted sm:text-xl text-balance leading-relaxed">
-            Membangun website, aplikasi, dan infrastruktur yang membantu pekerjaan menjadi lebih sederhana.
+            Kami mengembangkan website, aplikasi, dan sistem untuk berbagai kebutuhan bisnis dan operasional Anda.
           </p>
 
           <div className="mt-6 flex flex-col sm:flex-row items-center gap-4">

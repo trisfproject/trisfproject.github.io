@@ -8,8 +8,9 @@ export function Projects() {
   const featuredOrder = [
     'NYX',
     'LANGIT RMS',
+    'Sewa AC Cikarang',
+    'Global Teknindo',
     'REDNECK EV',
-    'Cron Dashboard',
   ];
   const featuredProjects = featuredOrder
     .map((title) => projects.find((project) => project.title === title))
@@ -20,9 +21,12 @@ export function Projects() {
       <Container>
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 gap-6">
           <Reveal>
-            <h2 className="text-3xl font-bold tracking-tight text-text-main sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-text-main sm:text-4xl mb-4">
               Project
             </h2>
+            <p className="max-w-2xl text-lg text-text-muted">
+              Beberapa website, aplikasi, dan sistem yang kami kembangkan untuk berbagai kebutuhan.
+            </p>
           </Reveal>
           <Reveal delay={0.1}>
             <Link
