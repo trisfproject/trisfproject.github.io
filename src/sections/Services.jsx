@@ -9,6 +9,7 @@ const services = [
     icon: Layout,
     color: 'text-brand-green',
     hoverColor: 'group-hover:text-brand-green',
+    bgAccent: 'bg-brand-green',
   },
   {
     title: 'Infrastructure & Automation',
@@ -16,6 +17,7 @@ const services = [
     icon: Server,
     color: 'text-brand-blue',
     hoverColor: 'group-hover:text-brand-blue',
+    bgAccent: 'bg-brand-blue',
   },
   {
     title: 'Software & Open Source',
@@ -23,6 +25,7 @@ const services = [
     icon: Smartphone,
     color: 'text-brand-purple',
     hoverColor: 'group-hover:text-brand-purple',
+    bgAccent: 'bg-brand-purple',
   },
 ];
 
@@ -38,12 +41,14 @@ export function Services() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 lg:gap-12">
           {services.map((service, index) => {
             return (
               <Reveal key={service.title} delay={index * 0.1}>
-                <div className="group flex flex-col py-5 md:py-0 border-b border-line-site/40 md:border-b-0 last:border-b-0">
-                  <span className={`text-xs md:text-sm font-mono font-bold mb-2 md:mb-4 transition-colors duration-300 text-text-muted ${service.color}`}>
+                <div className="group flex flex-col relative overflow-hidden p-6 md:p-4 lg:p-0 bg-surface md:bg-transparent border border-line-site md:border-transparent rounded-2xl md:rounded-xl lg:rounded-none shadow-sm md:shadow-none transition-all duration-300 md:hover:bg-surface md:hover:border-line-site md:hover:shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] active:scale-[0.98] md:active:scale-100">
+                  <div className={`absolute top-0 left-0 w-full h-1 md:w-0 md:group-hover:w-full transition-all duration-500 ${service.bgAccent}`} />
+                  
+                  <span className={`text-xs md:text-sm font-mono font-bold mb-3 md:mb-4 transition-colors duration-300 text-text-muted ${service.color}`}>
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <div className="flex flex-col">
