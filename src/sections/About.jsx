@@ -14,7 +14,7 @@ export function About() {
               Teknologi bukan sekadar dibuat. Teknologi harus berguna.
             </p>
             <p className="text-lg sm:text-xl leading-relaxed text-text-muted font-light mt-2">
-              Di TRISF PROJECT, kami membangun solusi digital berdasarkan kebutuhan nyata dan bagaimana solusi tersebut digunakan.
+              Di TRISF PROJECT, kami membangun solusi digital berdasarkan kebutuhan nyata dan cara solusi tersebut digunakan.
             </p>
           </div>
         </Reveal>

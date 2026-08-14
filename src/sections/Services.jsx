@@ -41,10 +41,10 @@ export function Services() {
                   <div className="mb-5 flex items-center text-text-main">
                     <Icon size={24} strokeWidth={1.5} />
                   </div>
-                  <h3 className="mb-3 text-xl font-semibold text-text-main">
+                  <h3 className="mb-3 text-2xl font-semibold text-text-main">
                     {service.title}
                   </h3>
-                  <p className="text-lg text-text-muted leading-relaxed max-w-sm">
+                  <p className="text-lg text-text-muted leading-relaxed">
                     {service.description}
                   </p>
                 </div>

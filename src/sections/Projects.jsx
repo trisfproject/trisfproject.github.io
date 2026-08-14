@@ -25,7 +25,7 @@ export function Projects() {
               Project
             </h2>
             <p className="max-w-2xl text-lg text-text-muted">
-              Beberapa website, aplikasi, dan sistem yang kami kembangkan untuk berbagai kebutuhan.
+              Beberapa project yang kami kembangkan untuk berbagai kebutuhan bisnis dan operasional.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -40,20 +40,30 @@ export function Projects() {
         </div>
         
         <div className="flex flex-col border-t border-line-site">
-          {featuredProjects.map((project, index) => (
-            <Reveal key={project.title} delay={index * 0.1}>
-              <div className="group flex flex-col sm:flex-row sm:items-center py-6 sm:py-8 border-b border-line-site hover:bg-black/[0.01] dark:hover:bg-white/[0.01] transition-colors duration-300">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:gap-12 md:gap-24 w-full px-4 sm:px-6">
-                  <h3 className="text-xl font-semibold text-text-main min-w-[200px] shrink-0">
-                    {project.title}
-                  </h3>
-                  <p className="mt-2 sm:mt-0 text-text-muted leading-relaxed">
-                    {project.description}
-                  </p>
-                </div>
-              </div>
-            </Reveal>
-          ))}
+          {featuredProjects.map((project, index) => {
+            const projectUrl = project.live || project.github;
+            const RowWrapper = projectUrl ? 'a' : 'div';
+            
+            return (
+              <Reveal key={project.title} delay={index * 0.1}>
+                <RowWrapper 
+                  href={projectUrl}
+                  target={projectUrl ? "_blank" : undefined}
+                  rel={projectUrl ? "noreferrer" : undefined}
+                  className="group flex flex-col sm:flex-row sm:items-center py-6 sm:py-8 border-b border-line-site hover:bg-black/[0.01] dark:hover:bg-white/[0.01] transition-colors duration-300"
+                >
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:gap-12 md:gap-24 w-full px-4 sm:px-6">
+                    <h3 className="text-xl font-semibold text-text-main min-w-[200px] shrink-0">
+                      {project.title}
+                    </h3>
+                    <p className="mt-2 sm:mt-0 text-text-muted leading-relaxed">
+                      {project.description}
+                    </p>
+                  </div>
+                </RowWrapper>
+              </Reveal>
+            );
+          })}
         </div>
       </Container>
     </section>
