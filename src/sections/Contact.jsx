@@ -8,12 +8,12 @@ export function Contact() {
       <Container>
         <Reveal>
           <div className="max-w-3xl mx-auto text-center flex flex-col items-center gap-6">
-            <h2 className="text-xs font-semibold tracking-widest uppercase text-text-muted">
+            <p className="text-xs font-semibold tracking-widest uppercase text-text-muted">
               MARI TERHUBUNG
-            </h2>
-            <p className="text-3xl font-bold tracking-tight text-text-main sm:text-4xl lg:text-5xl text-balance leading-tight">
-              Punya kebutuhan digital yang ingin diwujudkan?
             </p>
+            <h2 className="text-3xl font-bold tracking-tight text-text-main sm:text-4xl lg:text-5xl text-balance leading-tight">
+              Punya kebutuhan digital yang ingin diwujudkan?
+            </h2>
             <p className="text-lg text-text-muted max-w-2xl text-balance mb-2">
               Ceritakan kebutuhan Anda. Kami akan membantu memahami kebutuhan tersebut dan mencari solusi yang tepat.
             </p>
