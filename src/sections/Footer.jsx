@@ -1,7 +1,7 @@
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-line-site py-12 bg-surface">
+    <footer className="border-t border-line-site pt-12 pb-28 md:py-12 bg-surface">
       <div className="section-shell flex flex-col md:flex-row justify-between gap-8 text-sm text-text-muted">
         <div className="flex flex-col gap-2">
           <p className="font-semibold text-text-main">TRISF PROJECT</p>

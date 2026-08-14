@@ -1,17 +1,16 @@
-import { Menu, Sun, Moon, X } from 'lucide-react';
+import { Home, LayoutGrid, Folder, Info, Phone, Sun, Moon } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
 const navItems = [
-  { label: 'Beranda', to: '/' },
-  { label: 'Layanan', to: '/#services' },
-  { label: 'Project', to: '/projects' },
-  { label: 'Tentang', to: '/#about' },
-  { label: 'Kontak', to: '/#contact' },
+  { label: 'Beranda', to: '/', icon: Home },
+  { label: 'Layanan', to: '/#services', icon: LayoutGrid },
+  { label: 'Project', to: '/projects', icon: Folder },
+  { label: 'Tentang', to: '/#about', icon: Info },
+  { label: 'Kontak', to: '/#contact', icon: Phone },
 ];
 
 export function Navbar() {
-  const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('top');
   const location = useLocation();
@@ -110,7 +109,7 @@ export function Navbar() {
   }, [location.pathname]);
 
   useEffect(() => {
-    setOpen(false);
+    // Close mobile nav listener removed
   }, [location.pathname, location.hash]);
 
   const isItemActive = (item) => {
@@ -124,9 +123,10 @@ export function Navbar() {
   };
 
   return (
+    <>
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 ${
-        scrolled || open
+        scrolled
           ? 'border-b border-line-site bg-bg-site/90 shadow-site backdrop-blur-2xl supports-[backdrop-filter]:bg-bg-site/80'
           : 'border-b border-transparent bg-transparent'
       }`}
@@ -177,41 +177,40 @@ export function Navbar() {
           >
             {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
           </button>
-
-          <button
-            type="button"
-            className="grid size-10 place-items-center rounded-full bg-surface text-text-main transition hover:bg-black/[0.03] dark:hover:bg-white/[0.04] focus:outline-none focus:ring-2 focus:ring-accent-site"
-            aria-label={open ? 'Close navigation' : 'Open navigation'}
-            aria-expanded={open}
-            aria-controls="mobile-navigation"
-            onClick={() => setOpen((value) => !value)}
-          >
-            {open ? <X size={19} /> : <Menu size={19} />}
-          </button>
         </div>
       </nav>
-
-      {open ? (
-        <div id="mobile-navigation" className="section-shell pb-4 md:hidden">
-          <div className="rounded-2xl border border-line-site bg-surface p-2 shadow-site">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                aria-current={isItemActive(item) ? 'page' : undefined}
-                className={`block rounded-xl px-4 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-accent-site ${
-                  isItemActive(item)
-                    ? 'bg-accent-muted text-accent-site'
-                    : 'text-text-muted hover:bg-black/[0.04] dark:hover:bg-white/[0.06] hover:text-text-main'
-                }`}
-              >
-                {item.label}
-              </NavLink>
-            ))}
-          </div>
-        </div>
-      ) : null}
     </header>
+
+    {/* Mobile Floating Navigation */}
+    <nav
+      className="md:hidden fixed left-1/2 z-50 flex -translate-x-1/2 items-center justify-center gap-1 rounded-[2rem] border border-line-site bg-surface/90 px-3 py-2 shadow-site backdrop-blur-2xl supports-[backdrop-filter]:bg-surface/80"
+      style={{ bottom: 'max(1.5rem, env(safe-area-inset-bottom))' }}
+    >
+      {navItems.map((item) => {
+        const Icon = item.icon;
+        const active = isItemActive(item);
+        return (
+          <NavLink
+            key={item.to}
+            to={item.to}
+            aria-current={active ? 'page' : undefined}
+            className={`flex w-[4rem] flex-col items-center justify-center gap-1 rounded-2xl p-1.5 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-site ${
+              active
+                ? 'text-accent-site'
+                : 'text-text-muted hover:text-text-main'
+            }`}
+          >
+            <div className={`grid size-8 place-items-center rounded-full transition-colors ${active ? 'bg-accent-muted' : 'bg-transparent'}`}>
+              <Icon size={18} strokeWidth={active ? 2.5 : 2} />
+            </div>
+            <span className={`text-[9px] font-medium leading-none ${active ? 'font-semibold' : ''}`}>
+              {item.label}
+            </span>
+          </NavLink>
+        );
+      })}
+    </nav>
+    </>
   );
 }
 
