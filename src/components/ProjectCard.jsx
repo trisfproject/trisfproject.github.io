@@ -6,12 +6,12 @@ export function ProjectCard({ project, compact = false }) {
   return (
     <article
       {...spotlight}
-      className={`card-spotlight group flex h-full flex-col rounded-[24px] border border-line-site p-5 shadow-site transition duration-200 ease-out hover:-translate-y-1 hover:border-[#22c55e]/35 hover:shadow-hover-site sm:p-6 ${
+      className={`card-spotlight group flex h-full flex-col rounded-[24px] border border-line-site p-5 shadow-site transition-all duration-200 ease-out hover:-translate-y-[3px] hover:border-accent-site/30 hover:shadow-hover-site active:scale-[0.98] active:translate-y-0 sm:p-6 ${
         compact ? 'min-h-[280px]' : 'min-h-[280px]'
       }`}
     >
       <div className="mb-5 flex flex-wrap items-start gap-2">
-        <span className="rounded-full border border-accent-border bg-accent-muted px-3 py-1 text-xs font-semibold text-[#16a34a] dark:text-[#22c55e]">
+        <span className="rounded-full border border-accent-border bg-accent-muted px-3 py-1 text-xs font-semibold text-[#16a34a] dark:text-[#22c55e] transition-colors duration-200 group-hover:bg-accent-site/15">
           {project.category}
         </span>
         {project.type ? (
@@ -22,7 +22,7 @@ export function ProjectCard({ project, compact = false }) {
         {project.tags.slice(0, 5).map((tag) => (
           <span
             key={tag}
-            className="rounded-full border border-line-site bg-surface-strong px-3 py-1 text-xs font-medium text-text-muted transition group-hover:border-line-strong group-hover:text-text-main"
+            className="rounded-full border border-line-site bg-surface-strong px-3 py-1 text-xs font-medium text-text-muted transition-colors duration-200 group-hover:border-line-strong group-hover:text-text-main"
           >
             {tag}
           </span>

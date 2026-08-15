@@ -25,10 +25,10 @@ export function Contact() {
               
               <a
                 href="mailto:hello@trisf.id"
-                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-text-main px-8 py-3.5 text-sm font-semibold text-bg-site transition duration-300 hover:bg-accent-site hover:text-white focus:outline-none focus:ring-2 focus:ring-accent-site"
+                className="group/cta inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-text-main px-8 py-3.5 text-sm font-semibold text-bg-site transition-all duration-250 ease-out hover:bg-accent-site hover:text-white hover:shadow-[0_4px_16px_-2px_rgba(22,163,74,0.3)] dark:hover:shadow-[0_4px_16px_-2px_rgba(34,197,94,0.25)] focus:outline-none focus:ring-2 focus:ring-accent-site active:scale-[0.97]"
               >
                 Hubungi Kami
-                <ArrowRight size={16} />
+                <ArrowRight size={16} className="transition-transform duration-250 ease-out group-hover/cta:translate-x-0.5" />
               </a>
             </div>
           </div>

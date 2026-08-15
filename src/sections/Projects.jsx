@@ -45,10 +45,10 @@ export function Projects() {
           <Reveal delay={0.1}>
             <Link
               to="/projects"
-              className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-text-muted transition hover:text-text-main focus:outline-none focus:ring-2 focus:ring-line-strong border border-transparent hover:border-line-site"
+              className="group/link inline-flex items-center justify-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-text-muted transition-all duration-250 ease-out hover:text-text-main focus:outline-none focus:ring-2 focus:ring-line-strong border border-transparent hover:border-line-site"
             >
               Lihat semua project
-              <ArrowRight aria-hidden="true" size={16} />
+              <ArrowRight aria-hidden="true" size={16} className="transition-transform duration-250 ease-out group-hover/link:translate-x-0.5" />
             </Link>
           </Reveal>
         </div>
@@ -56,7 +56,7 @@ export function Projects() {
         <div className="flex flex-col sm:border-t sm:border-line-site mt-4 md:mt-0">
           {featuredProjects.map((project, index) => (
             <Reveal key={project.title} delay={index * 0.1}>
-              <div className="group flex flex-col p-6 sm:p-0 sm:py-8 bg-surface sm:bg-transparent border border-line-site sm:border-x-0 sm:border-t-0 sm:border-b sm:border-line-site/50 rounded-2xl sm:rounded-none mb-4 sm:mb-0 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.04)] sm:shadow-none hover:bg-black/[0.01] dark:hover:bg-white/[0.01] transition-all duration-300 active:scale-[0.98] sm:active:scale-100">
+              <div className="group flex flex-col p-6 sm:p-0 sm:py-8 bg-surface sm:bg-transparent border border-line-site sm:border-x-0 sm:border-t-0 sm:border-b sm:border-line-site/50 rounded-2xl sm:rounded-none mb-4 sm:mb-0 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.04)] sm:shadow-none hover:bg-black/[0.015] dark:hover:bg-white/[0.015] transition-all duration-250 ease-out active:scale-[0.98] sm:active:scale-100">
                 <div className="flex flex-col md:flex-row md:items-center md:gap-24 w-full sm:px-6">
                   <h3 className={`text-[1.35rem] sm:text-2xl font-bold text-text-main min-w-[200px] shrink-0 flex items-center gap-3 transition-colors duration-300 ${getProjectColors(project).hover}`}>
                     <span className={`size-2 rounded-full shrink-0 ${getProjectColors(project).dot}`} />

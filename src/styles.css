@@ -81,6 +81,12 @@ html {
   scroll-padding-top: 88px;
 }
 
+@media (max-width: 767px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+}
+
 body {
   margin: 0;
   min-width: 320px;

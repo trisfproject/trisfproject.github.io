@@ -27,7 +27,13 @@ export function ProjectsPage() {
         description="Jelajahi project dan karya engineering TRISF."
         url="https://trisfproject.github.io/projects"
       />
-      <main id="main-content" className="min-h-[100dvh] pt-28 sm:pt-32 pb-24 bg-bg-site">
+      <motion.main
+        id="main-content"
+        className="min-h-[100dvh] pt-28 sm:pt-32 pb-24 bg-bg-site"
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+      >
         <Container className="mb-16">
           <Reveal>
             <h1 className="text-4xl font-bold tracking-tight text-text-main sm:text-5xl mb-6">
@@ -66,16 +72,16 @@ export function ProjectsPage() {
                 layout
                 key={project.title}
                 className="h-full"
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.22 }}
+                transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
               >
                 <ProjectCard project={project} />
               </motion.div>
             ))}
           </motion.div>
         </Container>
-      </main>
+      </motion.main>
     </>
   );
 }

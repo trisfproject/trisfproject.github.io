@@ -143,10 +143,10 @@ export function Navbar() {
               key={item.to}
               to={item.to}
               aria-current={isItemActive(item) ? 'page' : undefined}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-accent-site ${
+              className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-250 ease-out focus:outline-none focus:ring-2 focus:ring-accent-site ${
                 isItemActive(item)
                   ? 'bg-accent-muted text-accent-site'
-                  : 'text-text-muted hover:bg-black/[0.03] dark:hover:bg-white/[0.05] hover:text-text-main'
+                  : 'text-text-muted hover:bg-black/[0.04] dark:hover:bg-white/[0.06] hover:text-text-main'
               }`}
             >
               {item.label}
@@ -212,16 +212,16 @@ export function Navbar() {
             key={item.to}
             to={item.to}
             aria-current={active ? 'page' : undefined}
-            className={`flex flex-1 min-w-[3.5rem] flex-col items-center justify-center gap-1 rounded-2xl p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green ${
+            className={`flex flex-1 min-w-[3.5rem] flex-col items-center justify-center gap-1 rounded-2xl p-1 transition-all duration-250 ease-out focus:outline-none focus:ring-2 focus:ring-brand-green ${
               active
                 ? 'text-brand-green'
                 : 'text-text-muted hover:text-text-main'
             }`}
           >
-            <div className={`grid size-7 place-items-center rounded-full transition-colors ${active ? 'bg-brand-green/10' : 'bg-transparent'}`}>
+            <div className={`grid size-7 place-items-center rounded-full transition-all duration-250 ease-out ${active ? 'bg-brand-green/12 scale-105' : 'bg-transparent scale-100'}`}>
               <Icon size={18} strokeWidth={active ? 2 : 1.5} />
             </div>
-            <span className={`text-[9px] font-medium leading-none ${active ? 'font-semibold' : ''}`}>
+            <span className={`text-[9px] font-medium leading-none transition-all duration-250 ${active ? 'font-semibold' : ''}`}>
               {item.label}
             </span>
           </NavLink>

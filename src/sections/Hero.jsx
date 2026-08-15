@@ -26,15 +26,15 @@ export function Hero() {
           <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto px-6 sm:px-0">
             <Link
               to="/projects"
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-text-main px-8 py-3.5 text-sm font-semibold text-bg-site transition duration-300 hover:bg-brand-green hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-green"
+              className="group/cta inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-text-main px-8 py-3.5 text-sm font-semibold text-bg-site transition-all duration-250 ease-out hover:bg-brand-green hover:text-white hover:shadow-[0_4px_16px_-2px_rgba(22,163,74,0.3)] dark:hover:shadow-[0_4px_16px_-2px_rgba(34,197,94,0.25)] focus:outline-none focus:ring-2 focus:ring-brand-green active:scale-[0.97]"
             >
               Lihat Project
-              <ArrowRight size={16} strokeWidth={2.5} />
+              <ArrowRight size={16} strokeWidth={2.5} className="transition-transform duration-250 ease-out group-hover/cta:translate-x-0.5" />
             </Link>
             
             <a
               href="#contact"
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-line-site px-8 py-3.5 text-sm font-medium text-text-main transition duration-300 hover:border-brand-green hover:text-brand-green focus:outline-none focus:ring-2 focus:ring-brand-green"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full border border-line-site px-8 py-3.5 text-sm font-medium text-text-main transition-all duration-250 ease-out hover:border-brand-green hover:text-brand-green hover:bg-accent-muted focus:outline-none focus:ring-2 focus:ring-brand-green active:scale-[0.97]"
             >
               Hubungi Kami
             </a>
