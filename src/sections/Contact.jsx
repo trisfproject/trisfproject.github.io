@@ -4,15 +4,26 @@ import { Reveal } from '../components/Reveal.jsx';
 
 export function Contact() {
   return (
-    <section id="contact" className="py-14 sm:py-24">
+    <section id="contact" className="relative py-14 sm:py-24">
+      {/* Subtle separator */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40%] max-w-xs h-[1px] bg-gradient-to-r from-transparent via-line-site to-transparent" />
+
       <Container>
         <Reveal>
           <div className="relative w-full max-w-4xl mx-auto">
+            {/* Ambient color glows — blue + warm orange */}
             <div className="absolute inset-0 -z-10 pointer-events-none">
-              <div className="absolute top-1/2 left-1/4 -translate-y-1/2 -translate-x-1/2 w-[60%] h-[120%] rounded-full bg-brand-blue/8 dark:bg-brand-blue/4 blur-[80px]" />
-              <div className="absolute top-1/2 right-1/4 -translate-y-1/2 translate-x-1/2 w-[60%] h-[120%] rounded-full bg-brand-orange/8 dark:bg-brand-orange/4 blur-[80px]" />
+              <div className="absolute top-1/2 left-1/4 -translate-y-1/2 -translate-x-1/2 w-[60%] h-[120%] rounded-full bg-brand-blue/6 dark:bg-brand-blue/3 blur-[80px]" />
+              <div className="absolute top-1/2 right-1/4 -translate-y-1/2 translate-x-1/2 w-[60%] h-[120%] rounded-full bg-brand-orange/6 dark:bg-brand-orange/3 blur-[80px]" />
             </div>
-            <div className="text-center flex flex-col items-center gap-3 sm:gap-5 bg-surface border border-line-site rounded-2xl sm:rounded-3xl p-6 sm:p-12 md:p-16 shadow-site transition-colors duration-200 hover:border-line-strong">
+
+            <div className="relative text-center flex flex-col items-center gap-3 sm:gap-5 bg-surface border border-line-site rounded-2xl sm:rounded-3xl p-6 sm:p-12 md:p-16 shadow-site transition-colors duration-200 hover:border-line-strong overflow-hidden">
+              {/* Subtle corner accents */}
+              <div className="absolute top-4 left-4 w-3 h-[1px] bg-brand-blue/30 dark:bg-brand-blue/20" />
+              <div className="absolute top-4 left-4 w-[1px] h-3 bg-brand-blue/30 dark:bg-brand-blue/20" />
+              <div className="absolute bottom-4 right-4 w-3 h-[1px] bg-brand-orange/30 dark:bg-brand-orange/20" />
+              <div className="absolute bottom-4 right-4 w-[1px] h-3 bg-brand-orange/30 dark:bg-brand-orange/20" />
+
               <p className="text-[0.7rem] sm:text-xs font-semibold tracking-widest uppercase text-text-muted">
                 MARI TERHUBUNG
               </p>

@@ -110,12 +110,22 @@ body {
     linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 64px 64px;
   background-position: center top;
-  -webkit-mask-image: radial-gradient(ellipse at top center, black 0%, transparent 65%);
-  mask-image: radial-gradient(ellipse at top center, black 0%, transparent 65%);
+  -webkit-mask-image: radial-gradient(ellipse at top center, black 0%, transparent 60%);
+  mask-image: radial-gradient(ellipse at top center, black 0%, transparent 60%);
 }
 
 .dark .hero-grid {
-  opacity: 0.5;
+  opacity: 0.4;
+}
+
+/* Pulse animation for status dot */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse {
+  animation: pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 ::selection {

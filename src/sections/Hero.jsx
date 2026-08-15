@@ -8,13 +8,33 @@ export function Hero() {
       id="top"
       className="relative flex min-h-[100dvh] items-center justify-center pt-16 pb-12 sm:pt-24 overflow-hidden"
     >
+      {/* Ambient color glows */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute -top-[20%] -left-[10%] w-[60%] h-[60%] rounded-full bg-brand-green/8 dark:bg-brand-green/5 blur-[100px]" />
-        <div className="absolute top-[10%] -right-[10%] w-[50%] h-[50%] rounded-full bg-brand-blue/8 dark:bg-brand-blue/4 blur-[100px]" />
+        <div className="absolute -top-[20%] -left-[10%] w-[60%] h-[60%] rounded-full bg-brand-green/8 dark:bg-brand-green/5 blur-[120px]" />
+        <div className="absolute top-[10%] -right-[10%] w-[50%] h-[50%] rounded-full bg-brand-blue/6 dark:bg-brand-blue/3 blur-[120px]" />
       </div>
+
+      {/* Technical grid canvas */}
       <div className="hero-grid" />
+
+      {/* Corner accent marks — digital workspace feel */}
+      <div className="absolute top-[15%] left-[8%] hidden lg:block pointer-events-none">
+        <div className="w-6 h-[1px] bg-brand-green/30 dark:bg-brand-green/20" />
+        <div className="w-[1px] h-6 bg-brand-green/30 dark:bg-brand-green/20" />
+      </div>
+      <div className="absolute bottom-[20%] right-[8%] hidden lg:block pointer-events-none">
+        <div className="w-6 h-[1px] bg-brand-blue/25 dark:bg-brand-blue/15 ml-auto" />
+        <div className="w-[1px] h-6 bg-brand-blue/25 dark:bg-brand-blue/15 ml-auto" />
+      </div>
+
       <Container className="relative z-10 flex flex-col items-center justify-center text-center">
         <div className="flex flex-col items-center gap-6 sm:gap-8 max-w-4xl mx-auto">
+          {/* Small status badge */}
+          <div className="inline-flex items-center gap-2 rounded-full border border-line-site bg-surface/80 dark:bg-surface/60 px-3.5 py-1.5 backdrop-blur-sm">
+            <span className="size-1.5 rounded-full bg-brand-green animate-pulse" />
+            <span className="text-[0.7rem] sm:text-xs font-medium text-text-muted tracking-wide">Building digital solutions</span>
+          </div>
+
           <h1 className="text-[2.25rem] leading-[1.12] font-extrabold tracking-tight text-text-main sm:text-5xl md:text-6xl lg:text-7xl text-balance">
             Dari ide menjadi<br className="hidden sm:block" /> solusi digital.
           </h1>
