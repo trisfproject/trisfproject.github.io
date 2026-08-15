@@ -212,13 +212,13 @@ export function Navbar() {
               key={item.to}
               to={item.to}
               aria-current={active ? 'page' : undefined}
-              className={`flex flex-1 flex-col items-center justify-center gap-1.5 rounded-2xl mx-1 my-1.5 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-brand-green/50 ${
+              className={`flex flex-1 flex-col items-center justify-center gap-1.5 transition-colors duration-200 ease-out focus:outline-none ${
                 active
-                  ? 'text-brand-green bg-brand-green/8 dark:bg-brand-green/10'
+                  ? 'text-brand-green'
                   : 'text-text-muted'
               }`}
             >
-              <Icon size={22} strokeWidth={active ? 2 : 1.5} />
+              <Icon size={21} strokeWidth={active ? 2 : 1.5} />
               <span className={`text-[11px] leading-none ${active ? 'font-semibold' : 'font-medium'}`}>
                 {item.label}
               </span>
