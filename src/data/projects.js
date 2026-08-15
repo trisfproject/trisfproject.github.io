@@ -15,16 +15,14 @@ export const projects = [
     tags: ['Web App', 'Management'],
     type: 'Client Project',
   },
-
   {
     title: 'REDNECK EV',
     category: 'Web & Digital Products',
     featured: true,
     description: 'Platform digital untuk kebutuhan dan informasi seputar kendaraan listrik.',
-    tags: ['Platform', 'EV'],
+    tags: ['Website', 'EV'],
     type: 'Client Project',
   },
-
   {
     title: 'E-Voting',
     category: 'Web & Digital Products',
@@ -64,13 +62,36 @@ export const projects = [
     description: 'Bot Telegram untuk membantu kebutuhan informasi dan fungsi otomatis.',
     tags: ['Bot', 'Automation'],
     type: 'Internal Tool',
-  }
+  },
+  {
+    title: 'Global Teknindo',
+    category: 'Web & Digital Products',
+    featured: false,
+    description: 'Website company profile untuk memperkenalkan perusahaan dan layanan bisnis.',
+    tags: ['Company Profile', 'Website'],
+    type: 'Client Project',
+  },
+  {
+    title: 'Sewa AC Cikarang',
+    category: 'Web & Digital Products',
+    featured: false,
+    description: 'Website layanan sewa AC untuk rumah, kantor, proyek, gudang, dan tempat usaha.',
+    tags: ['Landing Page', 'Website'],
+    type: 'Client Project',
+  },
+  {
+    title: 'XFI - XiaomiHub',
+    category: 'Software & Open Source',
+    featured: false,
+    description: 'Platform digital untuk mendukung komunitas dan ekosistem Xiaomi.',
+    tags: ['Community', 'Platform'],
+    type: 'Open Source',
+  },
 ];
 
 export const projectCategories = [
   'All',
   'Web & Digital Products',
   'Infrastructure & Automation',
-  'Software & Open Source'
+  'Software & Open Source',
 ];
-
