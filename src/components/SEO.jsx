@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 const defaultDescription =
-  'TRISF PROJECTS provides Infrastructure, Monitoring, Observability, Automation, Cloud Engineering, Android Development, and Web Solutions.';
+  'TRISF PROJECT mengembangkan website, aplikasi, dan sistem untuk berbagai kebutuhan bisnis dan operasional.';
 
 function setMeta(selector, value) {
   const element = document.head.querySelector(selector);
@@ -9,7 +9,7 @@ function setMeta(selector, value) {
 }
 
 export function SEO({
-  title = 'TRISF PROJECTS | Engineering & Technical Services',
+  title = 'TRISF PROJECT — Solusi Digital untuk Bisnis',
   description = defaultDescription,
   url = 'https://trisfproject.github.io/',
 }) {
