@@ -29,7 +29,7 @@ export function ProjectsPage() {
       />
       <motion.main
         id="main-content"
-        className="min-h-[100dvh] pt-24 sm:pt-28 md:pt-32 pb-32 md:pb-24 bg-bg-site"
+        className="min-h-[100dvh] pt-24 sm:pt-28 md:pt-32 pb-36 md:pb-24 bg-bg-site"
         initial={{ opacity: 0, y: 6 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}

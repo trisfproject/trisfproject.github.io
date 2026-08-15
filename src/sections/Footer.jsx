@@ -1,7 +1,7 @@
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-line-site bg-surface pt-10 pb-32 md:pt-12 md:pb-12">
+    <footer className="border-t border-line-site bg-surface pt-10 pb-36 md:pt-12 md:pb-12">
       <div className="section-shell flex flex-col md:flex-row justify-between gap-6 md:gap-8 text-sm text-text-muted">
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2.5">

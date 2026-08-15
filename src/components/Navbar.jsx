@@ -201,8 +201,8 @@ export function Navbar() {
 
       {/* Mobile Floating Bottom Navigation */}
       <nav
-        className="md:hidden fixed left-1/2 z-50 flex -translate-x-1/2 items-center justify-center gap-0.5 rounded-full border border-line-site bg-surface/95 px-2 py-1.5 shadow-site backdrop-blur-xl supports-[backdrop-filter]:bg-surface/85"
-        style={{ bottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}
+        className="md:hidden fixed left-4 right-4 z-50 flex items-stretch rounded-[20px] border border-line-site bg-surface/95 shadow-[0_2px_12px_-2px_rgba(0,0,0,0.08)] dark:shadow-[0_2px_12px_-2px_rgba(0,0,0,0.4)] backdrop-blur-lg supports-[backdrop-filter]:bg-surface/88"
+        style={{ bottom: 'max(0.75rem, env(safe-area-inset-bottom))', height: '70px' }}
       >
         {navItems.map((item) => {
           const Icon = item.icon;
@@ -212,16 +212,14 @@ export function Navbar() {
               key={item.to}
               to={item.to}
               aria-current={active ? 'page' : undefined}
-              className={`flex min-w-[3rem] flex-col items-center justify-center gap-0.5 rounded-full px-2 py-1.5 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-brand-green ${
+              className={`flex flex-1 flex-col items-center justify-center gap-1.5 rounded-2xl mx-1 my-1.5 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-brand-green/50 ${
                 active
-                  ? 'text-brand-green'
+                  ? 'text-brand-green bg-brand-green/8 dark:bg-brand-green/10'
                   : 'text-text-muted'
               }`}
             >
-              <div className={`grid size-6 place-items-center rounded-full transition-all duration-200 ease-out ${active ? 'bg-brand-green/10' : ''}`}>
-                <Icon size={16} strokeWidth={active ? 2.2 : 1.5} />
-              </div>
-              <span className={`text-[8px] leading-none ${active ? 'font-semibold' : 'font-medium'}`}>
+              <Icon size={22} strokeWidth={active ? 2 : 1.5} />
+              <span className={`text-[11px] leading-none ${active ? 'font-semibold' : 'font-medium'}`}>
                 {item.label}
               </span>
             </NavLink>
