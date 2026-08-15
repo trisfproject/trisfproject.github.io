@@ -122,113 +122,112 @@ export function Navbar() {
 
   return (
     <>
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 ${
-        scrolled
-          ? 'border-b border-line-site bg-bg-site/90 shadow-site backdrop-blur-2xl supports-[backdrop-filter]:bg-bg-site/80'
-          : 'border-b border-transparent bg-transparent'
-      }`}
-    >
-      <nav className="section-shell flex h-16 items-center justify-between sm:h-[72px]">
-        <Link
-          to="/"
-          className="inline-flex min-w-0 items-center rounded-full bg-surface px-4 py-2 text-sm font-bold tracking-widest text-text-main transition duration-200 hover:bg-black/[0.03] dark:hover:bg-white/[0.04] focus:outline-none focus:ring-2 focus:ring-accent-site"
-        >
-          TRISF PROJECT
-        </Link>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 ${
+          scrolled
+            ? 'border-b border-line-site bg-bg-site/90 shadow-site backdrop-blur-2xl supports-[backdrop-filter]:bg-bg-site/80'
+            : 'border-b border-transparent bg-transparent'
+        }`}
+      >
+        <nav className="section-shell flex h-14 items-center justify-between sm:h-16 md:h-[72px]">
+          <Link
+            to="/"
+            className="inline-flex min-w-0 items-center rounded-full bg-surface border border-line-site px-3.5 py-1.5 text-xs sm:text-sm font-bold tracking-widest text-text-main transition duration-200 hover:border-line-strong focus:outline-none focus:ring-2 focus:ring-accent-site"
+          >
+            TRISF PROJECT
+          </Link>
 
-        <div className="hidden items-center gap-1 md:flex">
-          {navItems.map((item) => (
+          <div className="hidden items-center gap-0.5 md:flex">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                aria-current={isItemActive(item) ? 'page' : undefined}
+                className={`rounded-full px-3.5 py-2 text-sm font-medium transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-accent-site ${
+                  isItemActive(item)
+                    ? 'bg-accent-muted text-accent-site'
+                    : 'text-text-muted hover:bg-surface-strong hover:text-text-main'
+                }`}
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </div>
+
+          <div className="hidden items-center gap-1.5 md:flex">
+            <a
+              href="https://trisf.my.id/"
+              aria-label="Main Web"
+              title="Main Web"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="grid size-9 place-items-center rounded-full text-text-muted transition duration-200 hover:bg-surface-strong hover:text-text-main focus:outline-none focus:ring-2 focus:ring-accent-site"
+            >
+              <ExternalLink size={16} />
+            </a>
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
+              className="grid size-9 place-items-center rounded-full text-text-muted transition duration-200 hover:bg-surface-strong hover:text-text-main focus:outline-none focus:ring-2 focus:ring-accent-site cursor-pointer"
+            >
+              {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
+            </button>
+          </div>
+
+          {/* Mobile header actions */}
+          <div className="flex items-center gap-1 md:hidden">
+            <a
+              href="https://trisf.my.id/"
+              aria-label="Main Web"
+              title="Main Web"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="grid size-9 place-items-center rounded-full text-text-muted transition duration-200 hover:text-text-main focus:outline-none focus:ring-2 focus:ring-accent-site"
+            >
+              <ExternalLink size={16} />
+            </a>
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
+              className="grid size-9 place-items-center rounded-full text-text-muted transition duration-200 hover:text-text-main focus:outline-none focus:ring-2 focus:ring-accent-site cursor-pointer"
+            >
+              {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      {/* Mobile Floating Bottom Navigation */}
+      <nav
+        className="md:hidden fixed left-1/2 z-50 flex -translate-x-1/2 items-center justify-center gap-0.5 rounded-full border border-line-site bg-surface/95 px-2 py-1.5 shadow-site backdrop-blur-xl supports-[backdrop-filter]:bg-surface/85"
+        style={{ bottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}
+      >
+        {navItems.map((item) => {
+          const Icon = item.icon;
+          const active = isItemActive(item);
+          return (
             <NavLink
               key={item.to}
               to={item.to}
-              aria-current={isItemActive(item) ? 'page' : undefined}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-250 ease-out focus:outline-none focus:ring-2 focus:ring-accent-site ${
-                isItemActive(item)
-                  ? 'bg-accent-muted text-accent-site'
-                  : 'text-text-muted hover:bg-black/[0.04] dark:hover:bg-white/[0.06] hover:text-text-main'
+              aria-current={active ? 'page' : undefined}
+              className={`flex min-w-[3rem] flex-col items-center justify-center gap-0.5 rounded-full px-2 py-1.5 transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-brand-green ${
+                active
+                  ? 'text-brand-green'
+                  : 'text-text-muted'
               }`}
             >
-              {item.label}
+              <div className={`grid size-6 place-items-center rounded-full transition-all duration-200 ease-out ${active ? 'bg-brand-green/10' : ''}`}>
+                <Icon size={16} strokeWidth={active ? 2.2 : 1.5} />
+              </div>
+              <span className={`text-[8px] leading-none ${active ? 'font-semibold' : 'font-medium'}`}>
+                {item.label}
+              </span>
             </NavLink>
-          ))}
-        </div>
-
-        <div className="hidden items-center gap-2 md:flex">
-          <a
-            href="https://trisf.my.id/"
-            aria-label="Main Web"
-            title="Main Web"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="grid size-10 place-items-center rounded-full bg-surface text-text-muted transition duration-200 hover:bg-black/[0.03] dark:hover:bg-white/[0.04] hover:text-text-main focus:outline-none focus:ring-2 focus:ring-accent-site cursor-pointer"
-          >
-            <ExternalLink size={18} />
-          </a>
-          <button
-            type="button"
-            onClick={toggleTheme}
-            aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
-            className="grid size-10 place-items-center rounded-full bg-surface text-text-muted transition duration-200 hover:bg-black/[0.03] dark:hover:bg-white/[0.04] hover:text-text-main focus:outline-none focus:ring-2 focus:ring-accent-site cursor-pointer"
-          >
-            {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
-          </button>
-        </div>
-
-        {/* Mobile menu trigger and theme toggle */}
-        <div className="flex items-center gap-2 md:hidden">
-          <a
-            href="https://trisf.my.id/"
-            aria-label="Main Web"
-            title="Main Web"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="grid size-10 place-items-center rounded-full bg-surface text-text-muted transition duration-200 hover:bg-black/[0.03] dark:hover:bg-white/[0.04] hover:text-text-main focus:outline-none focus:ring-2 focus:ring-accent-site cursor-pointer"
-          >
-            <ExternalLink size={18} />
-          </a>
-          <button
-            type="button"
-            onClick={toggleTheme}
-            aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
-            className="grid size-10 place-items-center rounded-full bg-surface text-text-muted transition duration-200 hover:bg-black/[0.03] dark:hover:bg-white/[0.04] hover:text-text-main focus:outline-none focus:ring-2 focus:ring-accent-site cursor-pointer"
-          >
-            {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
-          </button>
-        </div>
+          );
+        })}
       </nav>
-    </header>
-
-    {/* Mobile Floating Navigation */}
-    <nav
-      className="md:hidden fixed left-1/2 z-50 flex -translate-x-1/2 items-center justify-center gap-1 rounded-[2rem] border border-line-site bg-bg-site/95 px-2 py-1.5 shadow-sm backdrop-blur-2xl supports-[backdrop-filter]:bg-bg-site/80"
-      style={{ bottom: 'max(1.5rem, env(safe-area-inset-bottom))' }}
-    >
-      {navItems.map((item) => {
-        const Icon = item.icon;
-        const active = isItemActive(item);
-        return (
-          <NavLink
-            key={item.to}
-            to={item.to}
-            aria-current={active ? 'page' : undefined}
-            className={`flex flex-1 min-w-[3.5rem] flex-col items-center justify-center gap-1 rounded-2xl p-1 transition-all duration-250 ease-out focus:outline-none focus:ring-2 focus:ring-brand-green ${
-              active
-                ? 'text-brand-green'
-                : 'text-text-muted hover:text-text-main'
-            }`}
-          >
-            <div className={`grid size-7 place-items-center rounded-full transition-all duration-250 ease-out ${active ? 'bg-brand-green/12 scale-105' : 'bg-transparent scale-100'}`}>
-              <Icon size={18} strokeWidth={active ? 2 : 1.5} />
-            </div>
-            <span className={`text-[9px] font-medium leading-none transition-all duration-250 ${active ? 'font-semibold' : ''}`}>
-              {item.label}
-            </span>
-          </NavLink>
-        );
-      })}
-    </nav>
     </>
   );
 }
-

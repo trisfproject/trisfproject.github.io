@@ -1,27 +1,29 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   color-scheme: light;
-  --bg: #FCFBF7; /* Warm off-white minimal */
+  --bg: #FCFBF7;
   --surface: #ffffff;
   --surface-strong: #f4f4f5;
   --line: rgba(0, 0, 0, 0.08);
-  --line-strong: rgba(0, 0, 0, 0.12);
-  --grid-line: rgba(0, 0, 0, 0.04);
-  --muted: #52525b; /* zinc-600 */
-  --accent: #16a34a; /* green-600 */
-  --brand-green: #16a34a; /* green-600 */
-  --brand-blue: #2563eb; /* blue-600 */
-  --brand-orange: #ea580c; /* orange-600 */
-  --brand-purple: #9333ea; /* purple-600 */
-  --brand-amber: #d97706; /* amber-600 */
-  --brand-cyan: #0891b2; /* cyan-600 */
+  --line-strong: rgba(0, 0, 0, 0.13);
+  --grid-line: rgba(0, 0, 0, 0.045);
+  --muted: #52525b;
+  --accent: #16a34a;
+  --brand-green: #16a34a;
+  --brand-blue: #2563eb;
+  --brand-orange: #ea580c;
+  --brand-purple: #9333ea;
+  --brand-amber: #d97706;
+  --brand-cyan: #0891b2;
   --accent-muted: rgba(22, 163, 74, 0.08);
   --accent-border: rgba(22, 163, 74, 0.2);
-  --text-main: #18181b; /* zinc-900 */
-  --text-secondary: #3f3f46; /* zinc-700 */
-  --shadow-site: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
-  --shadow-hover-site: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -4px rgba(0, 0, 0, 0.02);
+  --text-main: #18181b;
+  --text-secondary: #3f3f46;
+  --shadow-site: 0 1px 3px 0 rgba(0, 0, 0, 0.03), 0 1px 2px -1px rgba(0, 0, 0, 0.03);
+  --shadow-hover-site: 0 8px 16px -4px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
 
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -35,35 +37,36 @@
 
 .dark {
   color-scheme: dark;
-  --bg: #09090b; /* zinc-950 */
-  --surface: #18181b; /* zinc-900 */
-  --surface-strong: #27272a; /* zinc-800 */
-  --line: rgba(255, 255, 255, 0.08);
-  --line-strong: rgba(255, 255, 255, 0.16);
-  --grid-line: rgba(255, 255, 255, 0.04);
-  --muted: #d4d4d8; /* zinc-300 */
-  --accent: #22c55e; /* green-500 */
-  --brand-green: #22c55e; /* green-500 */
-  --brand-blue: #3b82f6; /* blue-500 */
-  --brand-orange: #f97316; /* orange-500 */
-  --brand-purple: #a855f7; /* purple-500 */
-  --brand-amber: #f59e0b; /* amber-500 */
-  --brand-cyan: #06b6d4; /* cyan-500 */
+  --bg: #0a0a0c;
+  --surface: #141416;
+  --surface-strong: #1e1e21;
+  --line: rgba(255, 255, 255, 0.07);
+  --line-strong: rgba(255, 255, 255, 0.13);
+  --grid-line: rgba(255, 255, 255, 0.025);
+  --muted: #a1a1aa;
+  --accent: #22c55e;
+  --brand-green: #22c55e;
+  --brand-blue: #60a5fa;
+  --brand-orange: #fb923c;
+  --brand-purple: #c084fc;
+  --brand-amber: #fbbf24;
+  --brand-cyan: #22d3ee;
   --accent-muted: rgba(34, 197, 94, 0.1);
-  --accent-border: rgba(34, 197, 94, 0.2);
-  --text-main: #fafafa;
-  --text-secondary: #d4d4d8;
-  --shadow-site: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
-  --shadow-hover-site: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+  --accent-border: rgba(34, 197, 94, 0.22);
+  --text-main: #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --shadow-site: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px -1px rgba(0, 0, 0, 0.3);
+  --shadow-hover-site: 0 8px 16px -4px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
 }
 
 @theme {
   --color-bg-site: var(--bg);
-  --color-surface-site: var(--surface);
+  --color-surface: var(--surface);
   --color-surface-strong: var(--surface-strong);
   --color-line-site: var(--line);
   --color-line-strong: var(--line-strong);
   --color-text-main: var(--text-main);
+  --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--muted);
   --color-accent-site: var(--accent);
   --color-brand-green: var(--brand-green);
@@ -74,6 +77,8 @@
   --color-brand-cyan: var(--brand-cyan);
   --color-accent-muted: var(--accent-muted);
   --color-accent-border: var(--accent-border);
+  --shadow-site: var(--shadow-site);
+  --shadow-hover-site: var(--shadow-hover-site);
 }
 
 html {
@@ -95,21 +100,22 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.dark body {
-  /* Minimal override if needed */
-}
-
+/* Hero grid — visible in light, extremely subtle in dark */
 .hero-grid {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background-image: 
+  background-image:
     linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
     linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 64px 64px;
   background-position: center top;
-  -webkit-mask-image: radial-gradient(ellipse at top center, black 0%, transparent 70%);
-  mask-image: radial-gradient(ellipse at top center, black 0%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at top center, black 0%, transparent 65%);
+  mask-image: radial-gradient(ellipse at top center, black 0%, transparent 65%);
+}
+
+.dark .hero-grid {
+  opacity: 0.5;
 }
 
 ::selection {
@@ -122,9 +128,22 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Section shell — responsive container */
 .section-shell {
   margin-inline: auto;
-  width: min(1024px, calc(100% - 32px)); /* Slightly narrower for minimal feel */
+  width: min(1024px, calc(100% - 2rem));
+}
+
+@media (min-width: 640px) {
+  .section-shell {
+    width: min(1024px, calc(100% - 3rem));
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-shell {
+    width: min(1080px, calc(100% - 4rem));
+  }
 }
 
 .text-balance {
@@ -138,28 +157,10 @@ button {
   -webkit-line-clamp: 3;
 }
 
-.surface {
-  border: 1px solid var(--line);
-  background: var(--surface);
-  box-shadow: var(--shadow-site);
-  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.surface:hover {
-  border-color: var(--line-strong);
-  box-shadow: var(--shadow-hover-site);
-}
-
 @supports (content-visibility: auto) {
   main > section {
     content-visibility: auto;
     contain-intrinsic-size: 760px;
-  }
-}
-
-@media (min-width: 640px) {
-  .section-shell {
-    width: min(1024px, calc(100% - 48px));
   }
 }
 
@@ -173,4 +174,3 @@ button {
     transition-duration: 0.01ms !important;
   }
 }
-

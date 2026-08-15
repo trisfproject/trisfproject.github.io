@@ -31,31 +31,31 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-16 sm:py-20">
+    <section id="services" className="py-14 sm:py-20">
       <Container>
         <Reveal>
-          <div className="mb-12 md:mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-text-main sm:text-4xl">
+          <div className="mb-10 md:mb-14">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-text-main">
               Yang Kami Kerjakan
             </h2>
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-6 lg:gap-10">
           {services.map((service, index) => {
             return (
-              <Reveal key={service.title} delay={index * 0.1}>
-                <div className="group flex flex-col relative overflow-hidden p-6 md:p-4 lg:p-0 bg-surface md:bg-transparent border border-line-site md:border-transparent rounded-2xl md:rounded-xl lg:rounded-none shadow-sm md:shadow-none transition-all duration-250 ease-out md:hover:bg-surface md:hover:border-line-site md:hover:shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] md:hover:-translate-y-[2px] active:scale-[0.98] md:active:scale-100 md:active:translate-y-0">
-                  <div className={`absolute top-0 left-0 w-full h-1 md:w-0 md:group-hover:w-full transition-all duration-400 ease-out ${service.bgAccent}`} />
-                  
-                  <span className={`text-xs md:text-sm font-mono font-bold mb-3 md:mb-4 ${service.color}`}>
+              <Reveal key={service.title} delay={index * 0.08}>
+                <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-line-site bg-surface p-5 sm:p-6 shadow-site transition-all duration-200 ease-out md:rounded-xl md:bg-transparent md:border-transparent md:shadow-none md:hover:bg-surface md:hover:border-line-site md:hover:shadow-site md:hover:-translate-y-[2px] active:scale-[0.98] md:active:scale-100 md:active:translate-y-0">
+                  <div className={`absolute top-0 left-0 h-[3px] w-full md:w-0 md:group-hover:w-full transition-all duration-300 ease-out ${service.bgAccent}`} />
+
+                  <span className={`text-xs font-mono font-bold mb-3 ${service.color}`}>
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <div className="flex flex-col">
-                    <h3 className={`mb-1.5 md:mb-2 text-[1.15rem] md:text-xl font-bold text-text-main transition-colors duration-250 ${service.hoverColor}`}>
+                    <h3 className={`mb-1.5 text-base sm:text-lg md:text-xl font-bold text-text-main transition-colors duration-200 ${service.hoverColor}`}>
                       {service.title}
                     </h3>
-                    <p className="text-[0.9rem] md:text-base text-text-muted leading-relaxed font-light">
+                    <p className="text-sm sm:text-[0.9rem] md:text-base text-text-muted leading-relaxed font-light">
                       {service.description}
                     </p>
                   </div>
