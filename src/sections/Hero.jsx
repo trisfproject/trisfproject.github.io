@@ -32,7 +32,7 @@ export function Hero() {
           {/* Small status badge */}
           <div className="inline-flex items-center gap-2 rounded-full border border-line-site bg-surface/80 dark:bg-surface/60 px-3.5 py-1.5 backdrop-blur-sm">
             <span className="size-1.5 rounded-full bg-brand-green animate-pulse" />
-            <span className="text-[0.7rem] sm:text-xs font-medium text-text-muted tracking-wide">Building digital solutions</span>
+            <span className="text-[0.7rem] sm:text-xs font-medium text-text-muted tracking-wide">Membangun solusi digital</span>
           </div>
 
           <h1 className="text-[2.25rem] leading-[1.12] font-extrabold tracking-tight text-text-main sm:text-5xl md:text-6xl lg:text-7xl text-balance">

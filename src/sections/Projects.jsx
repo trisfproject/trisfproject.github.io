@@ -8,7 +8,6 @@ export function Projects() {
   const featuredOrder = [
     'NYX',
     'LANGIT RMS',
-    'REDNECK EV',
     'E-Voting',
     'Event Management',
     'Telegram Bot',
