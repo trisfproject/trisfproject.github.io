@@ -6,7 +6,7 @@ import { projects } from '../data/projects.js';
 
 export function Projects() {
   const featuredOrder = [
-    'NYX',
+    'NYX Monitoring Platform',
     'LANGIT RMS',
     'E-Voting',
     'Event Management',
@@ -17,7 +17,7 @@ export function Projects() {
     .filter(Boolean);
 
   const getProjectColors = (project) => {
-    if (project.title === 'NYX') return { dot: 'bg-brand-blue', line: 'bg-brand-blue', hover: 'group-hover:text-brand-blue' };
+    if (project.title === 'NYX Monitoring Platform') return { dot: 'bg-brand-blue', line: 'bg-brand-blue', hover: 'group-hover:text-brand-blue' };
     if (project.title === 'LANGIT RMS') return { dot: 'bg-brand-green', line: 'bg-brand-green', hover: 'group-hover:text-brand-green' };
     if (project.title === 'REDNECK EV') return { dot: 'bg-brand-orange', line: 'bg-brand-orange', hover: 'group-hover:text-brand-orange' };
     if (project.title === 'E-Voting') return { dot: 'bg-brand-purple', line: 'bg-brand-purple', hover: 'group-hover:text-brand-purple' };

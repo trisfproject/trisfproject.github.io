@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: 'NYX',
+    title: 'NYX Monitoring Platform',
     category: 'Infrastructure & Automation',
     featured: true,
     description: 'Platform untuk monitoring infrastruktur, layanan, dan kondisi operasional sistem.',
