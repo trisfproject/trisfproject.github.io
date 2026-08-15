@@ -4,7 +4,7 @@ import { Reveal } from '../components/Reveal.jsx';
 
 export function Contact() {
   return (
-    <section id="contact" className="relative py-14 sm:py-24">
+    <section id="contact" className="relative py-12 sm:py-24">
       {/* Subtle separator */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40%] max-w-xs h-[1px] bg-gradient-to-r from-transparent via-line-site to-transparent" />
 
@@ -17,7 +17,7 @@ export function Contact() {
               <div className="absolute top-1/2 right-1/4 -translate-y-1/2 translate-x-1/2 w-[60%] h-[120%] rounded-full bg-brand-orange/6 dark:bg-brand-orange/3 blur-[80px]" />
             </div>
 
-            <div className="relative text-center flex flex-col items-center gap-3 sm:gap-5 bg-surface border border-line-site rounded-2xl sm:rounded-3xl p-6 sm:p-12 md:p-16 shadow-site transition-colors duration-200 hover:border-line-strong overflow-hidden">
+            <div className="relative text-center flex flex-col items-center gap-3 sm:gap-5 bg-surface border border-line-site rounded-2xl sm:rounded-3xl p-5 sm:p-12 md:p-16 shadow-site transition-colors duration-200 hover:border-line-strong overflow-hidden">
               {/* Subtle corner accents */}
               <div className="absolute top-4 left-4 w-3 h-[1px] bg-brand-blue/30 dark:bg-brand-blue/20" />
               <div className="absolute top-4 left-4 w-[1px] h-3 bg-brand-blue/30 dark:bg-brand-blue/20" />
@@ -27,10 +27,10 @@ export function Contact() {
               <p className="text-[0.7rem] sm:text-xs font-semibold tracking-widest uppercase text-text-muted">
                 MARI TERHUBUNG
               </p>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-text-main text-balance leading-tight">
+              <h2 className="text-[1.4rem] sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-text-main text-balance leading-tight">
                 Ada kebutuhan yang ingin diwujudkan?
               </h2>
-              <p className="text-sm sm:text-base md:text-lg text-text-muted max-w-2xl text-balance mb-1 sm:mb-2">
+              <p className="text-[0.85rem] sm:text-base md:text-lg text-text-muted max-w-2xl text-balance mb-1 sm:mb-2">
                 Ceritakan kebutuhan Anda. Kami akan membantu memahami kebutuhan tersebut dan mencari solusi yang tepat.
               </p>
 
