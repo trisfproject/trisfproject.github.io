@@ -201,8 +201,8 @@ export function Navbar() {
 
       {/* Mobile Floating Bottom Navigation */}
       <nav
-        className="md:hidden fixed left-4 right-4 z-50 flex items-stretch rounded-[20px] border border-line-site bg-surface/95 shadow-[0_2px_12px_-2px_rgba(0,0,0,0.08)] dark:shadow-[0_2px_12px_-2px_rgba(0,0,0,0.4)] backdrop-blur-lg supports-[backdrop-filter]:bg-surface/88"
-        style={{ bottom: 'max(0.75rem, env(safe-area-inset-bottom))', height: '70px' }}
+        className="md:hidden fixed left-4 right-4 z-50 flex items-stretch justify-around rounded-[32px] px-2 border border-line-site bg-surface/95 shadow-[0_2px_12px_-2px_rgba(0,0,0,0.08)] dark:shadow-[0_2px_12px_-2px_rgba(0,0,0,0.4)] backdrop-blur-lg supports-[backdrop-filter]:bg-surface/88"
+        style={{ bottom: 'max(1rem, env(safe-area-inset-bottom))', height: '70px' }}
       >
         {navItems.map((item) => {
           const Icon = item.icon;
